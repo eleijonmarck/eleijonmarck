@@ -1,0 +1,29 @@
+version: "3.6"
+
+services:
+  web:
+services:
+  redis:
+    image: redis:alpine
+
+  dev.eleijomarck.com:
+    environment:
+      - "DEBUG=0"
+    image: ebiven/vue-cli
+    command: npm run dev
+    volumes:
+      - .:/code
+      - ${PWD}/img:/home/eleijonmarck/img
+   networks:
+      - internal
+      - default
+    depends_on:
+      - redis
+    ports:
+      - 8080:8080
+
+networks:
+  internal:
+
+volumes:
+  frontend_dist:
