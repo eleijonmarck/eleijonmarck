@@ -1,6 +1,8 @@
 # eleijonmarck
 My personal repository of knowledge
 
+Inspiration taken from http://blog.otoro.net/
+
 ## Prerequisite
 
 ``` bash
