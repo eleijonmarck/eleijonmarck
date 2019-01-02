@@ -1,24 +1,20 @@
 <template>
-  <div class="container">
+<div class="container">
   <header class="site-header">
     <div class="branding">
-
+      <h2 class="site-title">
       <a href="http://blog.eleijonmarck.com/">
-        <img class="avatar" src="../img/unicorn.gif" alt="" width="100px">
+        <img src="../img/unicorn.gif" alt="" class="avatar">
       </a>
-
-      <h1 class="site-title">
-        <a href="http://eleijonmarck.com/">餌吏九 莉女无丸九玖</a>
+        <a href="http://eleijonmarck.com/">#TODO: A*.find(GoldenNugget)</a>
         <br>
         data ・ ml ・ philosophy
-      </h1>
-    </div>
-
+        </br>
     <nav class="site-nav">
-      <ul>
+      <ul style="float:left">
         <li>
-          <a class="page-link" href="/archive.html">
-            archive　
+          <a href="/archive.html" title="Archive">
+          <i class="fa fa-fw fa-archive"></i>
           </a>
         </li>
         <li>
@@ -43,42 +39,37 @@
         </li>
       </ul>
     </nav>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="jumbotron">
-            <div class="container">
-              <span class="display-5 h2"> #TODO: A*.find(GoldenNugget)</span>
-              <p class="lead">Simple example how to connect to the server, paginate results, create single page app...</p>
-            </div>
-          </div>
-        </div>
-  </div>
+      </h2>
+    </div>
   </header>
 
   <router-view></router-view>
 
-
-
-  <footer class="col-sm-12">
+  <footer>
     <hr>
     <p class="text-center"><a href="http://www.eleijonmarck.com" target="_blank">Eric Leijonmarck</a>&copy; 2018
     </p>
   </footer>
   </div>
-
 </template>
 
 <script>
 </script>
 
 <style>
-  .container {
-    max-width: 700px;
-  }
-
-  h1:first-letter,
-  h2:first-letter {
-    text-transform: uppercase;
-  }
+.site-header {
+    background: #fff;
+    padding-left: 20%;
+},
+.site-header .site-title {
+    font-weight: normal;
+    font-size: 1.25em;
+    line-height: 1.5;
+    color: #999;
+},
+.site-header .site-nav ul {
+    list-style: none;
+    line-height: 1.5;
+}
 </style>
 

@@ -1,6 +1,14 @@
 <template>
-  <div class="col-sm-12">
-  <input class="form-control input-sm" type="text" v-model="search" placeholder="search-here">
+<div class="posts">
+  <div class="post-teaser">
+  <div class="box">
+<div class="box">
+  <div class="container-4">
+    <input type="search" id="search" v-model="search" placeholder="Search..."/>
+    <button class="icon"><i class="fa fa-search"></i></button>
+  </div>
+</div>
+  </div>
         <paginate
           name="blogs"
           :list="posts"
@@ -32,6 +40,7 @@
         >
         </paginate-links>
         </div>
+        </div>
 </template>
 
 <script>
@@ -59,5 +68,44 @@ export default {
 </script>
 
 <style>
-  
+.container-4{
+  overflow: hidden;
+  width: 300px;
+  margin: auto;
+}
+.container-4 input#search{
+  width: 300px;
+  height: 50px;
+  background: #2b303b;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #fff;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.container-4 button.icon{
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+ 
+  border: none;
+  background: #232833;
+  height: 50px;
+  width: 50px;
+  color: #4f5b66;
+  opacity: 0;
+  font-size: 10pt;
+ 
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
 </style>
