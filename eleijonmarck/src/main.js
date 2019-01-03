@@ -4,7 +4,7 @@ import VueResource from 'vue-resource'
 import VuePaginate from 'vue-paginate'
 import VueRouter from 'vue-router'
 import PostDetail from './PostDetail.vue'
-import Blog from './Blog.vue'
+import Blog from './components/blog/blog.vue'
 
 // ENABLE SINGLE PAGE APP ROUTING
 const routes = [

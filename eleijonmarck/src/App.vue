@@ -59,7 +59,7 @@
 <style>
 .site-header {
     background: #fff;
-    padding-left: 20%;
+    padding-left: 10%;
 },
 .site-header .site-title {
     font-weight: normal;
