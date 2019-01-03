@@ -4,7 +4,7 @@
     <div class="branding">
       <h2 class="site-title">
       <a href="http://blog.eleijonmarck.com/">
-        <img src="../img/unicorn.gif" alt="" class="avatar">
+        <img src="../static/icons/unicorn.gif" alt="" class="avatar">
       </a>
         <a href="http://eleijonmarck.com/">#TODO: A*.find(GoldenNugget)</a>
         <br>
@@ -59,7 +59,7 @@
 <style>
 .site-header {
     background: #fff;
-    padding-left: 10%;
+    padding-left: 20%;
 },
 .site-header .site-title {
     font-weight: normal;

@@ -26,10 +26,6 @@ module.exports = {
         }
       },
       {
-        test: /\.md$/,
-        loader: 'vue-loader!vue-md-loader'
-      },
-      {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
