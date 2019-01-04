@@ -14,18 +14,22 @@
           tag="div"
         >
         
-        <section v-for="blog in posts">
+        <section v-for="blog in filteredBlogs">
         <header>
         <h1>
           <a class="post-link" v-bind:href="'' + blog.link">
             {{ blog.meta.title }}
           </a>
         </h1>
+        <img :src="'' + blog.meta.image"></img>
         <p class="meta">
-        2018-03-11
+        {{ blog.meta.date }}
         </p>
         </header>
-          <router-link :to="'/post/' + blog.id" class="btn btn-primary">Continue reading</router-link>
+        <vue-markdown>
+        {{ blog.content }}
+        </vue-markdown>
+          <router-link :to="'/post/' + blog.meta.title" class="btn btn-primary">Continue reading</router-link>
           <hr>
         </section>
         

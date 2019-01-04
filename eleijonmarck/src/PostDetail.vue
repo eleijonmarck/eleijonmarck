@@ -1,12 +1,12 @@
 <template>
   <article class="col-sm-12">
-		<h1>{{ post.title }}</h1>		
-		<p>{{ post.body }}</p>
+		<h1>{{ post.meta.title }}</h1>		
+		<p>{{ post.content }}</p>
 
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><router-link :to="'/'">Home</router-link></li>
-				<li class="breadcrumb-item active" aria-current="page">{{ post.title }}</li>
+				<li class="breadcrumb-item active" aria-current="page">{{ post.meta.title }}</li>
 			</ol>
 		</nav>
 

@@ -1,8 +1,9 @@
 ---
 {
   "title": "Pyenv installation correctly for MacOSX w. Matplotlib",
-  "image": "/img/tc-cli.gif",
-  "tags": ["genetic-algorithms", "osx", "matplotlib"]
+  "image": "/static/img/flappy.gif",
+  "tags": ["genetic-algorithms", "osx", "matplotlib"],
+  "date": "2018-12-03"
 }
 ---
 # Pyenv installation correctly for MacOSX w. Matplotlib

@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueResource from 'vue-resource'
 import VuePaginate from 'vue-paginate'
 import VueRouter from 'vue-router'
+import VueMarkdown from 'vue-markdown'
 import PostDetail from './PostDetail.vue'
 import Blog from './components/blog/blog.vue'
 
@@ -20,6 +21,7 @@ const router = new VueRouter({
 // Enable use of 3rd party plugins
 Vue.use(VueResource);
 Vue.use(VuePaginate);
+Vue.use(VueMarkdown);
 Vue.use(VueRouter);
 
 // init app
