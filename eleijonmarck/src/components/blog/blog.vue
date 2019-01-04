@@ -1,6 +1,8 @@
 <template>
 <div class="posts">
   <div class="post-teaser">
+  </div>
+  <div class="post-teaser">
   <div class="container-4">
     <input type="search" id="search" v-model="search" placeholder="Search..."/>
     <button class="icon"><i class="fa fa-search"></i></button>
@@ -12,11 +14,11 @@
           tag="div"
         >
         
-        <section v-for="blog in filteredBlogs">
+        <section v-for="blog in posts">
         <header>
         <h1>
-          <a class="post-link" href="https://example.com">
-            {{ blog.title }}
+          <a class="post-link" v-bind:href="'' + blog.link">
+            {{ blog.meta.title }}
           </a>
         </h1>
         <p class="meta">
