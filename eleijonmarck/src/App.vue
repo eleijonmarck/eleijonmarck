@@ -1,17 +1,11 @@
 <template>
   <div id='app'>
-  <!-- header -->
+  <!-- top -->
+  <top></top>
+  <!-- navbar -->
   <navbar></navbar>
-  <p>
-      <!-- use router-link component for navigation. -->
-      <!-- specify the link by passing the `to` prop. -->
-      <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
-      <router-link to="/">Homepage</router-link>
-      <router-link to="/blog">Blogs</router-link>
-  </p>
 
   <!-- main view -->
-
   <!-- route outlet -->
   <!-- component matched by the route will render here -->
   <router-view></router-view>
@@ -26,11 +20,13 @@
 </template>
 
 <script>
+  import Top from './components/Top.vue'
   import Navbar from './components/Navbar'
 
   export default {
     name: 'App',
     components: {
+      Top,
       Navbar
     }
   }
@@ -38,5 +34,8 @@
 
 <style scoped>
 
+.top {
+   text-align: center
+}
 </style>
 

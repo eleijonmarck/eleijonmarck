@@ -1,6 +1,6 @@
 <template>
 		<article>
-	<div class='container'>
+		<div class='container'>
 			<div id="container">
 		<img :src="'' + blog.meta.image" alt="" class="center"></img>
 				</div>
