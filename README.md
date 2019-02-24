@@ -3,6 +3,15 @@ My personal repository of knowledge
 
 Inspiration taken from http://blog.otoro.net/
 
+# TODO:
+0. ~search blogs~
+1. ~create routing for blog webpage~
+2. ~create script in Makefile to configure correct settings when adding a new blog~
+3. Create initial homepage "page"
+4. make top smaller and simpler
+5. make search availble for everything
+6. make routing for statistics (vue-altiair) combination
+
 ## Prerequisite
 
 ``` bash
@@ -23,9 +32,3 @@ $ npm install
 ``` bash
 $ npm run dev
 ```
-
-
-# TODO:
-
-1. create initial blog webpage
-2. make flask/node api to get all Markdown pages from /<path> to walkthrough and display on webpage
