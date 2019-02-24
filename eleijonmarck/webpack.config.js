@@ -36,6 +36,10 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.md$/,
+        loader: 'vue-loader!vue-md-loader'
       }
     ]
   },

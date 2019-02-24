@@ -16,6 +16,7 @@
     "vue-markdown": "^2.2.4",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.2",
+    "vue-simple-markdown": "^1.0.8",
     "walk": "^2.3.14"
   },
   "browserslist": [
@@ -32,6 +33,7 @@
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
     "vue-loader": "^13.0.5",
+    "vue-md-loader": "^1.1.0",
     "vue-paginate": "^3.6.0",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

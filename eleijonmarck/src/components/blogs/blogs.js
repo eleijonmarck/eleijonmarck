@@ -1,4 +1,3 @@
-import VueMarkdown from 'vue-markdown' // production
 export default {
 	data() {
 		return {
@@ -9,9 +8,9 @@ export default {
 	},
 	created() {
 		let self = this
-		var blog_links = ['https://raw.githubusercontent.com/eleijonmarck/eleijonmarck/master/blogs/2018-01-03-pyenv-macosx.md']
+		const blog_links = require('../../../static/blogs/blogs.json');
 
-		for (let blog_link of blog_links) {
+		for (let blog_link of blog_links['blogs']) {
 
 			fetch(blog_link)
 				.then((response) => { return response.text() })
@@ -27,14 +26,11 @@ export default {
 				}).catch(error => { console.log(error); });
 		}
 	},
-	components: {
-		VueMarkdown
-	},
 	computed: {
-		filteredBlogs: function(){
-		return this.paginated('blogs').filter((blog) => {
-			return blog.meta.title.match(this.search);
-		});
+		filteredBlogs: function () {
+			return this.paginated('blogs').filter((blog) => {
+				return blog.meta.title.match(this.search);
+			});
 		}
-	}
+	},
 }

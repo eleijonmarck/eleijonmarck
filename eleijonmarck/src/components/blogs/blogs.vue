@@ -1,8 +1,6 @@
 <template>
 <div class="posts">
   <div class="post-teaser">
-  </div>
-  <div class="post-teaser">
   <div class="container-4">
     <input type="search" id="search" v-model="search" placeholder="Search..."/>
     <button class="icon"><i class="fa fa-search"></i></button>
@@ -22,14 +20,9 @@
           </a>
         </h1>
         <img :src="'' + blog.meta.image"></img>
-        <p class="meta">
-        {{ blog.meta.date }}
-        </p>
+        <p class="meta"> {{ blog.meta.date }} </p>
         </header>
-        <vue-markdown>
-        {{ blog.content }}
-        </vue-markdown>
-          <router-link :to="'/post/' + blog.meta.title" class="btn btn-primary">Continue reading</router-link>
+          <p><router-link :to="{ path: '/blog/' + blog.meta.id }"> Continue Reading </router-link></p>
           <hr>
         </section>
         
@@ -55,4 +48,4 @@
 </template>
 
 <script src='./blogs.js'/>
-<style scoped src='./blog.css'/>
+<style scoped src='./blogs.css'/>
