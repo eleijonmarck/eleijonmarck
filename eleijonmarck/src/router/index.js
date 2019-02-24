@@ -1,22 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import BlogDetail from '../components/blogdetail/blogdetail.vue'
-import Blogs from '../components/blogs/blogs.vue'
-import Homepage from '../components/Homepage.vue'
+import BlogDetail from '../components/BlogDetail/BlogDetail.vue'
+import Blog from '../components/Blog/Blog.vue'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [
-        {
-            path: '/',
-            name: 'Homepage',
-            component: Homepage
-        },
-        { 
+       { 
             path: '/blog', 
-            name: 'Blogs',
-            component: Blogs 
+            name: 'Blog',
+            component: Blog
         },
         { 
             path: '/blog/:id', 
