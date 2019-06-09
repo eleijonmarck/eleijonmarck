@@ -1,12 +1,12 @@
 {
   "name": "eleijonmarck",
   "private": true,
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist",
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
