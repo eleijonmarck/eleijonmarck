@@ -7,8 +7,22 @@
   "date": "2018-12-03"
 }
 ---
-# Pyenv installation correctly for MacOSX w. Matplotlib
+# FlappyMind - Interactive learning
 For the past year I have been using pyenv for work. During the holidays I got to explore some fun repositories like [flappyMind](https://github.com/JonasRSV/flappyMind) a genetic algorithm solution for FlappyBird. This approach also provides the corresponding learning curve for each agent in a plot. This way you can see the development of the agents as they traverse the different generations.
+
+This uses a standard neural network architecture with abstractions for dealing with mutation and inheritance for the different families of generations. The model is trained faster by using the number keys <1,..5> for rendering so the progress can be seen from each generation. If you really want to get the high score of flappy bird, just press 0 and it stops to render and just trains; once you feel like the model has been trained enough. Just press whatever rendering button speed you want.
+
+model is in 
+
+```bash
+$ ls ANNGenetic
+
+EvolutionDemoOn2Dfunction.ipynb __pycache__
+README.md                       ann.py
+__init__.py                     test.py 
+```
+
+for rendering it is using
 
 `$ cat nnplayer.py`
 
@@ -23,7 +37,10 @@ For the past year I have been using pyenv for work. During the holidays I got to
 ...
 ```
 
-I got a familiar error with 
+
+
+If you get a familiar error with (MAC OSX rendering problems :(. ))
+
 ```python
 2019-01-03 13:20:45.135 python[44873:3146187] -[SDLApplication _setup:]: unrecognized selector sent to instance 0x7f824fe98430
 2019-01-03 13:20:45.139 python[44873:3146187] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[SDLApplication _setup:]: unrecognized selector sent to instance 0x7f824fe98430'

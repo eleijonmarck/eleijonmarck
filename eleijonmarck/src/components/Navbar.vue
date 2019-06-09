@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="pure-menu pure-menu-horizontal">
+        <div class="pure-menu pure-menu custom-restricted-width">
             <a href="#" class="pure-menu-heading pure-menu-link"><router-link to="/">Home</router-link></a>
             <ul class="pure-menu-list">
                 <!-- use router-link component for navigation. -->
@@ -26,5 +26,12 @@
 
     .pure-menu a {
         color: white;
+    }
+
+    .custom-restricted-width {
+        /* To limit the menu width to the content of the menu: */
+        display: inline-block;
+        /* Or set the width explicitly: */
+        /* width: 10em; */
     }
 </style>

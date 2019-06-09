@@ -33,9 +33,5 @@
 </script>
 
 <style scoped>
-
-.top {
-   text-align: center
-}
 </style>
 
