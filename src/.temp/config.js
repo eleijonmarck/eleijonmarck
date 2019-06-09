@@ -1,5 +1,5 @@
 export default {
-  "siteUrl": "https://eleijonmarck.github.io",
+  "siteUrl": "",
   "siteName": "#TODO: A*.find(information)",
   "titleTemplate": "%s - #TODO: A*.find(information)",
   "siteDescription": "A way to find some information",

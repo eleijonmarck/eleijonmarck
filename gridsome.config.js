@@ -7,8 +7,6 @@
 module.exports = {
   siteName: '#TODO: A*.find(information)',
   siteDescription: 'A way to find some information',
-  siteUrl: 'https://eleijonmarck.github.io',
-  pathPrefix: 'eleijonmarck',
 
   plugins: [
     {
