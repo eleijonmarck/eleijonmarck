@@ -3,6 +3,8 @@
     <!-- Author intro -->
     <Author :show-title="true" />
     
+    <!-- Search through posts -->
+    <search></search>
     <!-- List posts -->
     <div class="posts">
       <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
@@ -42,11 +44,13 @@
 <script>
 import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
+import Search from '~/components/Search.vue'
 
 export default {
   components: {
     Author,
-    PostCard
+    PostCard,
+    Search
   },
   metaInfo: {
     title: '#TODO: A*'
