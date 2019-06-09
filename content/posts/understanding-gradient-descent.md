@@ -1,5 +1,13 @@
-
-# An Introduction to Gradient Descent w. Linear Regression
+---
+title: "An Introduction to Gradient Descent w. Linear Regression"
+date: 2019-06-09
+published: true
+tags: ["statistics", "ml", "optimization"]
+cover_image: "./images/linear_regression_error.png"
+series: false
+canonical_url: false
+description: "Gradient descent is one of 'greatest hits' algorithms. This posts gives a detailed explained and walkthrough of why and how it is implemented and applied to an example for linear regression"
+---
 
 Gradient descent is one of those “greatest hits” algorithms that can offer a new perspective for solving problems. Unfortunately, it’s rarely taught in undergraduate computer science programs. In this post I’ll give an introduction to the gradient descent algorithm, and walk through an example that demonstrates how gradient descent can be used to solve machine learning problems such as linear regression.
 
@@ -10,14 +18,6 @@ Gradient descent is _**widely**_ used in Machine Learning and Deep Learning
 import pandas as pd
 import numpy as np
 import altair as alt
-```
-
-
-```python
-###########
-# actual data
-###########
-
 data = pd.read_csv('demo.txt')
 ```
 
@@ -74,6 +74,9 @@ Model score (how close are we to fit a line to the data) \n{:.2f}
     Model score (how close are we to fit a line to the data) 
     0.27
     
+
+This gives us the intercept $b$ 6.69 (where the line should be centered around) and the coefficient of $m$ 1.35.
+Which given our modeled loss function is a score of 0.27
 
 
 
