@@ -1,15 +1,15 @@
 # eleijonmarck blog
-> # TODO: A* find GoldNugget
-
-# eleijonmarck
+> # TODO: A* find information
 My personal repository of knowledge
+
+#### Tech
+Vue, Gridsome for deployment [Netlify](https://www.netlify.com/)
 
 # TODO:
 1. ~create routing for blog webpage~
+1. use katex for latex in markdown
 0. search blogs
 1. Create initial homepage "page"
-1. make top smaller and simpler
-1. make search available for everything
 
 ## Personal blog
 ### Why?
@@ -28,10 +28,12 @@ My personal repository of knowledge
 
 ## Install
 
-### 1. Install Gridsome CLI tool if you don't have
-`npm install --global @gridsome/cli`
+```bash
+$ npm install --global @gridsome/cli
+$ gridsome create my-gridsome-site https://github.com/gridsome/gridsome-starter-blog.git
+```
 
-### 2. Running this starter
+### Running
 ```bash
 $ make dev
 ```
