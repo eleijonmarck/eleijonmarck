@@ -3,7 +3,7 @@ title: "An Introduction to Gradient Descent w. Linear Regression"
 date: 2019-06-09
 published: true
 tags: ["statistics", "ml", "optimization"]
-cover_image: "./images/linear_regression_error.png"
+cover_image: "./images/gradient-descent-cover.gif"
 series: false
 canonical_url: false
 description: "Gradient descent is one of 'greatest hits' algorithms. This posts gives a detailed explained and walkthrough of why and how it is implemented and applied to an example for linear regression"
