@@ -24,7 +24,7 @@
           title
           path
         }
-        date (format: "D. MMMM YYYY")
+        date (format: "YYYY MMMM D")
         timeToRead
         description
         coverImage (width: 770, height: 380, blur: 10)
