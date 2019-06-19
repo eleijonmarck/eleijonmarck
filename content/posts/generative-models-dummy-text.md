@@ -3,7 +3,7 @@ title: "Generative model for text mock-data"
 date: 2019-03-03
 published: true
 tags: ["nlp", "mock-data", "generative-model"]
-cover_image: "./images/textgen_example.gif"
+coverImage: "./images/textgen_example.gif"
 series: false
 canonical_url: false
 description: "Any text-based entity or text-based column for upstarts or demos can be populated by generating mock data from a already learnt distribution or a encoding/decoding using textgen."

@@ -3,7 +3,7 @@ title: "Pyenv installation correctly for MacOSX w. Matplotlib"
 date: 2018-12-03
 published: true
 tags: ["genetic-algorithms", "osx", "matplotlib"]
-cover_image: "./images/flappy.gif"
+coverImage: "./images/flappy.gif"
 series: false
 canonical_url: false
 description: "Genetic algorithm for flappy bird"
