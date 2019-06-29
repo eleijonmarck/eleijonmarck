@@ -9,21 +9,21 @@ export default [
     path: "/",
     component: () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/Index.vue"),
     meta: {
-      data: true
+      data: [1,"9557cc74"]
     }
   },
   {
     path: "/:slug",
     component: () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/templates/Post.vue"),
     meta: {
-      data: true
+      data: () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/.cache/data/route-meta/0.json")
     }
   },
   {
     path: "/tag/:id",
     component: () => import(/* webpackChunkName: "page--src--templates--tag-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/templates/Tag.vue"),
     meta: {
-      data: true
+      data: () => import(/* webpackChunkName: "page--src--templates--tag-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/.cache/data/route-meta/1.json")
     }
   },
   {
