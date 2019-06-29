@@ -11,7 +11,7 @@
     
     <div class="post content-box">
       <div class="post__header">
-        <g-image alt="Cover image" v-if="$page.post.coverImage" :src="$page.post.coverImage" />
+        <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
       </div>
 
       <div class="post__content" v-html="$page.post.content" />
@@ -34,6 +34,8 @@ import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 
+// inside <script>
+import 'katex/dist/katex.min.css';
 export default {
   components: {
     Author,
@@ -68,7 +70,7 @@ query Post ($path: String!) {
     }
     description
     content
-    coverImage (width: 860, blur: 10)
+    cover_image (width: 860, blur: 10)
   }
 }
 </page-query>

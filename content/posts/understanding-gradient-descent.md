@@ -66,15 +66,6 @@ Model score (how close are we to fit a line to the data) \n{:.2f}
     model.score(X_test.values.reshape(-1, 1), y_test)))
 ```
 
-    
-    Model intercept (position of the line) 
-    6.69
-    Model coefficients (slope of the line) 
-    1.35
-    Model score (how close are we to fit a line to the data) 
-    0.27
-    
-
 This gives us the intercept $b$ 6.69 (where the line should be centered around) and the coefficient of $m$ 1.35.
 Which given our modeled loss function is a score of 0.27
 
@@ -193,11 +184,14 @@ Since we need to consider the impact each one has on the final prediction, we ne
 
 Given the loss function:
 
-$ f(m,b) =  \frac{1}{N} \sum_{i=1}^{n} (y_i - (mx_i + b))^2 $
+$$
+f(m,b) =  \frac{1}{N} \sum_{i=1}^{n} (y_i - (mx_i + b))^2
+$$
 
 The gradient can be calculated as:
 
-$ \begin{split}f'(m,b) =
+$$
+f'(m,b) =
    \begin{bmatrix}
      \frac{df}{dm}\\
      \frac{df}{db}\\
@@ -206,8 +200,8 @@ $ \begin{split}f'(m,b) =
    \begin{bmatrix}
      \frac{1}{N} \sum -2x_i(y_i - (mx_i + b)) \\
      \frac{1}{N} \sum -2(y_i - (mx_i + b)) \\
-    \end{bmatrix}\end{split}
-$
+    \end{bmatrix}
+$$
 
 
 ```python
