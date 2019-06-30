@@ -23,21 +23,24 @@ module.exports = {
             route: '/tag/:id',
             create: true
           }
+        },
+        remark: {
+          plugins: [
+            ['remark-math'],
+            ['remark-html-katex']
+          ]
         }
       }
     }
-  ],
-  transformers: {
-    //Add markdown support to all file-system sources
-    remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
-      plugins: [
-            ['remark-math'],
-            ['remark-html-katex'],
-            [ 'gridsome-plugin-remark-shiki', { theme: 'zeit' } ]
-      ]
-    }
-  },
+  ]
+  // transformers: {
+  //   //Add markdown support to all file-system sources
+  //   remark: {
+  //     externalLinksTarget: '_blank',
+  //     externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+  //     anchorClassName: 'icon icon-link',
+  //     plugins: [
+  //     ]
+  //   }
+  // },
 }
