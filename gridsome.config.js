@@ -25,9 +25,13 @@ module.exports = {
           }
         },
         remark: {
+          externalLinksTarget: '_blank',
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          anchorClassName: 'icon icon-link',
           plugins: [
             ['remark-math'],
-            ['remark-html-katex']
+            ['remark-html-katex'],
+            ['gridsome-plugin-remark-shiki', { theme: 'zeit' } ]
           ]
         }
       }
