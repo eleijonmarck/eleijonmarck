@@ -23,13 +23,6 @@ module.exports = {
             route: '/tag/:id',
             create: true
           }
-        },
-        remark: {
-          plugins: [
-            ['remark-math'],
-            ['remark-html-katex'],
-            [ 'gridsome-plugin-remark-shiki', { theme: 'zeit' } ]
-          ]
         }
       }
     }
@@ -41,6 +34,9 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
+            ['remark-math'],
+            ['remark-html-katex'],
+            [ 'gridsome-plugin-remark-shiki', { theme: 'zeit' } ]
       ]
     }
   },
