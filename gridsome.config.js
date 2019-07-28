@@ -26,22 +26,23 @@ module.exports = {
         },
         remark: {
           plugins: [
-            ['remark-math'],
-            ['remark-html-katex'],
-            [ 'gridsome-plugin-remark-shiki', { theme: 'nord' } ]
+            // ['remark-math'],
+            // ['remark-html-katex'],
+            // [ 'gridsome-plugin-remark-shiki', { theme: 'min' } ]
           ]
         }
       }
     }
-  ]
-  // transformers: {
-  //   //Add markdown support to all file-system sources
-  //   remark: {
-  //     externalLinksTarget: '_blank',
-  //     externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-  //     anchorClassName: 'icon icon-link',
-  //     plugins: [
-  //     ]
-  //   }
-  // },
+  ],
+  transformers: {
+    //Add markdown support to all file-system sources
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
 }
