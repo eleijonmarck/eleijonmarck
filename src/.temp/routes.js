@@ -9,7 +9,7 @@ export default [
     path: "/",
     component: () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/Index.vue"),
     meta: {
-      data: [1,"2c2ca478"]
+      data: [1,"0b276637"]
     }
   },
   {
