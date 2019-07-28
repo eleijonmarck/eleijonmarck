@@ -34,9 +34,6 @@ import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 
-// inside <script>
-import 'katex/dist/katex.min.css';
-
 export default {
   components: {
     Author,
