@@ -26,9 +26,9 @@ module.exports = {
         },
         remark: {
           plugins: [
-            // ['remark-math'],
-            // ['remark-html-katex'],
-            [ 'gridsome-plugin-remark-shiki', { theme: 'nord' } ]
+            ['remark-math'],
+            ['remark-html-katex'],
+            // [ 'gridsome-plugin-remark-shiki', { theme: 'nord' } ]
           ]
         }
       }
