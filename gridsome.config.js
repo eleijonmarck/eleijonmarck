@@ -23,14 +23,7 @@ module.exports = {
             route: '/tag/:id',
             create: true
           }
-        },
-        // remark: {
-        //   plugins: [
-        //     // ['remark-math'],
-        //     // ['remark-html-katex'],
-        //     [ 'gridsome-plugin-remark-shiki', { theme: 'nord' } ]
-        //   ]
-        // }
+        }
       }
     }
   ],
