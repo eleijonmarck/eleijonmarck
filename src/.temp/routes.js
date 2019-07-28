@@ -2,34 +2,29 @@ export default [
   {
     name: "home",
     path: "/",
-    component: () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/Index.vue"),
-    meta: {
-      data: [1,"5c1a0f8a"]
-    }
+    component: () => import(/* webpackChunkName: "component--home" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/Index.vue")
   },
   {
     name: "404",
     path: "/404",
-    component: () => import(/* webpackChunkName: "page--src--pages--404-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/404.vue")
+    component: () => import(/* webpackChunkName: "component--404" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/404.vue"),
+    meta: { isStatic: true, isIndex: false }
   },
   {
+    name: "tag",
     path: "/tag/:id",
-    component: () => import(/* webpackChunkName: "page--src--templates--tag-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/templates/Tag.vue"),
-    meta: {
-      data: () => import(/* webpackChunkName: "page--src--templates--tag-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/.cache/data/route-meta/0.json")
-    }
+    component: () => import(/* webpackChunkName: "component--tag" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/templates/Tag.vue")
   },
   {
+    name: "post",
     path: "/:slug",
-    component: () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/templates/Post.vue"),
-    meta: {
-      data: () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/.cache/data/route-meta/1.json")
-    }
+    component: () => import(/* webpackChunkName: "component--post" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/templates/Post.vue")
   },
   {
     name: "*",
     path: "*",
-    component: () => import(/* webpackChunkName: "page--src--pages--404-vue" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/404.vue")
+    component: () => import(/* webpackChunkName: "component--404" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/404.vue"),
+    meta: { isStatic: true, isIndex: false }
   }
 ]
 
