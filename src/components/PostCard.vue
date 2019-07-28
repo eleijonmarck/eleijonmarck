@@ -10,7 +10,7 @@
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
     <div class="post-card__footer">
-      <g-image alt="Cover image" v-if="post.cover_image" class="post-card__image" :src="post.cover_image" />
+      <g-image alt="Cover image" v-if="post.coverImage" class="post-card__image" :src="post.cover_image" />
     </div>
   </div>
 </template>
