@@ -7,6 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "webpack": "^3.0.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/vue-fontawesome": "^0.1.6",
@@ -16,6 +17,7 @@
     "@gridsome/transformer-remark": "^0.3.2",
     "gridsome": "^0.6.5",
     "gridsome-plugin-remark-shiki": "^0.3.0",
+    "remark-parse": "^6.0.0",
     "remark-html-katex": "^1.2.0",
     "remark-math": "^1.0.6",
     "vue-katex": "^0.2.0"
