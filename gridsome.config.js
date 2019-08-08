@@ -35,7 +35,9 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        'rehype-katex',
+        'remark-math',
+        'remark-html-katex',
+        'remark-html',
         '@gridsome/remark-prismjs'
       ]
     }

@@ -11,21 +11,17 @@
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@gridsome/remark-prismjs": "^0.0.4",
-    "@gridsome/source-filesystem": "^0.3.0",
-    "@gridsome/transformer-remark": "^0.2.0",
+    "@gridsome/remark-prismjs": "^0.0.6",
+    "@gridsome/source-filesystem": "^0.5.0",
+    "@gridsome/transformer-remark": "^0.3.2",
     "gh-pages": "^2.0.1",
-    "gridsome": "^0.5.0",
-    "rehype-katex": "^1.2.0",
-    "rehype-stringify": "^6.0.0",
-    "remark": "^10.0.1",
-    "remark-html": "^9.0.0",
+    "gridsome": "^0.6.4",
+    "remark-html": "^9.0.1",
     "remark-html-katex": "^1.2.0",
-    "remark-math": "^1.0.6",
-    "remark-rehype": "^4.0.0"
+    "remark-math": "^1.0.6"
   },
   "devDependencies": {
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0"
   }
 }

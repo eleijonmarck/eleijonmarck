@@ -3,7 +3,7 @@ title: "Genetic algorithm for flappy bird"
 date: 2019-01-10
 published: true
 tags: ["genetic-algorithms", "osx", "matplotlib"]
-cover_image: "./images/flappy.gif"
+coverImage: "./images/flappy.gif"
 series: false
 canonical_url: false
 description: "A neural network to play frappy bird with a genetic algorithm with different speeds and watch the progress."
