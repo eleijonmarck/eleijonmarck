@@ -10,7 +10,7 @@ description: ""
 This series will be covering the introduction of algorithms and their application.
 
 ### Why
-- Anywhere where realtime results want to be found quick. I want fasst :)
+- Anywhere where realtime results want to be found quick. I want fassssst :)
 - Efficiently calculating and handling the vast amount of data.
  - Vast amount of twitter feed
  - Sensor data
@@ -87,6 +87,6 @@ Just to give you a sense of what this intails:
 
 |          | input | time           |   |   |
 |----------|-------|----------------|---|---|
-| `O(n)`     | 10^5  | 13 seconds     |   |   |
-| `O(log n)` | 10^5  | 0.0001 seconds |   |   |
+| O(n)     | 10^5  | 13 seconds     |   |   |
+| O(logn) | 10^5  | 0.0001 seconds |   |   |
 |          |       |                |   |   |
