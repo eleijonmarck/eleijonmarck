@@ -12,26 +12,20 @@
 </template>
 
 <page-query>
-{
+query {
   posts: allPost {
     edges {
       node {
         id
         title
+        date (format: "YYYY MMMM D")
+        timeToRead
+        description
         path
         tags {
           id
           title
           path
-        }
-        date (format: "YYYY MMMM D")
-        timeToRead
-        description
-        coverImage (width: 770, height: 380, blur: 10)
-        ...on Post {
-            id
-            title
-            path
         }
       }
     }

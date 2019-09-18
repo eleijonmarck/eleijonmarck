@@ -1,30 +1,30 @@
 export default [
   {
-    name: "home",
-    path: "/",
-    component: () => import(/* webpackChunkName: "component--home" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/Index.vue")
+    path: "/tag/:id/",
+    component: () => import(/* webpackChunkName: "page--src--templates--tag-vue" */ "/home/eleijonmarck/dev/eleijonmarck/src/templates/Tag.vue")
+  },
+  {
+    path: "/about/",
+    component: () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/home/eleijonmarck/dev/eleijonmarck/src/pages/About.vue")
   },
   {
     name: "404",
-    path: "/404",
-    component: () => import(/* webpackChunkName: "component--404" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/404.vue"),
-    meta: { isStatic: true, isIndex: false }
+    path: "/404/",
+    component: () => import(/* webpackChunkName: "page--src--pages--404-vue" */ "/home/eleijonmarck/dev/eleijonmarck/src/pages/404.vue")
   },
   {
-    name: "tag",
-    path: "/tag/:id",
-    component: () => import(/* webpackChunkName: "component--tag" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/templates/Tag.vue")
+    path: "/:title/",
+    component: () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/home/eleijonmarck/dev/eleijonmarck/src/templates/Post.vue")
   },
   {
-    name: "post",
-    path: "/:slug",
-    component: () => import(/* webpackChunkName: "component--post" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/templates/Post.vue")
+    name: "home",
+    path: "/",
+    component: () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/home/eleijonmarck/dev/eleijonmarck/src/pages/Index.vue")
   },
   {
     name: "*",
     path: "*",
-    component: () => import(/* webpackChunkName: "component--404" */ "/Users/ericleijonmarck/dev/eleijonmarck/src/pages/404.vue"),
-    meta: { isStatic: true, isIndex: false }
+    component: () => import(/* webpackChunkName: "page--src--pages--404-vue" */ "/home/eleijonmarck/dev/eleijonmarck/src/pages/404.vue")
   }
 ]
 
