@@ -12,8 +12,11 @@ description: "Simple tricks to go from nothing to prototype of app"
 
 tldr;
 1. concept of idea
+ 
 2. prototype
+ 
 3. test & evaluate
+ 
 4. repeat steps 1-4
 
 ## Trial and Error, Science, testttt it
@@ -30,7 +33,6 @@ Take your idea and draw the what you want to make happen. Try to at least have s
 More on tht later, for now you need to get something on paper. Focus on clarity and getting the outcome that you want.
 
 todo: add picture of a super simple prototype
-``
 
 ## Designing 
 
@@ -42,7 +44,9 @@ we had an idea, had a flow on paper and pen. But what do you want for an outcome
 Small tricks for thinking about UI/UX
 
 1. Alignment
+ 
 2. Fonts
+ 
 3. Colorscheme / Colorpalette
 
 
@@ -81,6 +85,9 @@ Once every interaction is in place you can share it as a link which you can then
 ## Design algorithm
 
 1. concept of idea
+ 
 2. prototype
+ 
 3. test & evaluate
+ 
 4. repeat steps 1-4
