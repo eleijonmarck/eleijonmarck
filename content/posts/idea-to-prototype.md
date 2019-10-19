@@ -25,6 +25,8 @@ Prototype means, not even a minimial vialable product, minimival lovable product
 paper and pen. (paper and pen, could be classified as prototype in my opinion as well :) ) 
 
 
+More information was taken from the programming showdown podcast and the blog [7 things of visual design 2017](https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda)
+
 ## Pen and paper
 Take your idea and draw the what you want to make happen. Try to at least have some idea of how the user will feel.
 More on tht later, for now you need to get something on paper. Focus on clarity and getting the outcome that you want.
