@@ -1,8 +1,8 @@
-import plugin_project_3 from "/Users/ericleijonmarck/dev/eleijonmarck/gridsome.client.js"
+import plugin_project_6 from "/home/eleijonmarck/dev/eleijonmarck/gridsome.client.js"
 
 export default [
   {
-    run: plugin_project_3,
+    run: plugin_project_6,
     options: {}
   }
 ]

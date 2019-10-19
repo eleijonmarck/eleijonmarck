@@ -6,9 +6,9 @@ tags: ["leetcode", "algorithms"]
 cover_image: ""
 series: true
 canonical_url: false
-description: "Trick to help with reducing time complexity when interacting over multiple elements in array"
+description: "Tricks for string manipulation handling"
 ---
-# Algorithms: Window Functions
+# Algorithms: string manipulation
 
 A window function can be used to reduce complexity when one needs to interact over multiple elements in a array. Example here is [leetcode#424](https://leetcode.com/problems/longest-repeating-character-replacement/) where we need to calculate the longest repeating character over some array. Also we can add replacements of the array to make it longer, but this is really just an add on; the meat of the bone is the window function algorithm.
 

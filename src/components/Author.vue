@@ -4,7 +4,7 @@
 		<g-image alt="Author image" class="author__image" src="~/assets/images/unicorn.gif" width="180" height="180" blur="5" />
 
 		<h1 v-if="showTitle" class="author__site-title">
-			{{ $static.metaData.siteName }}
+			{{ $static.metadata.siteName }}
 		</h1>
 
 		<p class="author__intro">
@@ -26,7 +26,7 @@
 
 <static-query>
 query {
-  metaData {
+  metadata {
     siteName
   }
 }

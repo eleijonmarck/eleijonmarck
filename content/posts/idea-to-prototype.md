@@ -12,11 +12,11 @@ description: "Simple tricks to go from nothing to prototype of app"
 
 tldr;
 1. concept of idea
- 
+
 2. prototype
- 
+
 3. test & evaluate
- 
+
 4. repeat steps 1-4
 
 ## Trial and Error, Science, testttt it
@@ -27,6 +27,8 @@ or if you have just overfitted to something that is actually not a problem at al
 Prototype means, not even a minimial vialable product, minimival lovable product; it means that you have something more than
 paper and pen. (paper and pen, could be classified as prototype in my opinion as well :) ) 
 
+
+More information was taken from the programming showdown podcast and the blog [7 things of visual design 2017](https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda)
 
 ## Pen and paper
 Take your idea and draw the what you want to make happen. Try to at least have some idea of how the user will feel.

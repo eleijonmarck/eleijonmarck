@@ -1,7 +1,6 @@
 export default {
-  "siteUrl": "",
-  "siteName": "#TODO: A*.find(information)",
+  "trailingSlash": true,
   "titleTemplate": "%s - #TODO: A*.find(information)",
-  "siteDescription": "A way to find some information",
-  "version": "0.5.8"
+  "siteUrl": "",
+  "version": "0.7.3"
 }
