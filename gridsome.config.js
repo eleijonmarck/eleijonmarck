@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: '#TODO: A*.find(information)',
+  siteName: 'a_star.find(information)',
   siteDescription: 'A way to find some information',
 
   templates: {
