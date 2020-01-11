@@ -1,13 +1,17 @@
 ---
 title: "Genetic algorithm for flappy bird"
-date: 2019-01-10
-published: true
-tags: ["genetic-algorithms", "osx", "matplotlib"]
-cover_image: "./images/flappy.gif"
-series: false
-canonical_url: false
+date: "2019-01-10T22:40:32.169Z"
+template: "post"
+draft: false
+slug: "flappymind-genetic"
+category: "ML"
+tags:
+  - "genetic-algorithm"
 description: "A neural network to play frappy bird with a genetic algorithm with different speeds and watch the progress."
+socialImage: "./images/flappy.gif"
 ---
+
+![flappy]("./images/flappy.gif")
 
 During the holidays I got to have some fun together with [JonasRSV](https://github.com/JonasRSV) (he is top 0.3 % on a few kaggle competitions and a wonderfully kind human being). He and his friend have developed [flappyMind](https://github.com/JonasRSV/flappyMind) a genetic algorithm solution for FlappyBird. This approach also provides the corresponding learning curve for each agent in a plot. This way you can see the development of the agents as they traverse the different generations.
 
@@ -34,7 +38,7 @@ Rendering uses
 ...
 ```
 
-# Known issues
+#### Known issues
 If you get a familiar error with (MAC OSX rendering problems :(. ))
 
 ```python

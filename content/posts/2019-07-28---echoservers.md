@@ -1,13 +1,17 @@
 ---
 title: "EchoServer for monitoring of applications"
-date: 2019-07-28
-published: true
-tags: ["backend", "monitoring"]
-cover_image: "./images/echoserver.png"
-series: true
-canonical_url: false
+date: "2019-07-28T22:40:32.169Z"
+template: "post"
+draft: false
+slug: "echoservers"
+category: "backend"
+tags:
+  - "backend"
+  - "monitoring"
 description: "EchoServer send whatever you `$ curl localhost:4000` 'sent to it'. \"sent to it\""
+socialImage: "/media/echoserver.png"
 ---
+
 ### EchoServer
 
 > An "echo server" is a server that does nothing more than sending back whatever is sent to it. What can you use it for ? Whatever you feel like.
@@ -15,6 +19,7 @@ description: "EchoServer send whatever you `$ curl localhost:4000` 'sent to it'.
 Practical application of using echoservers is troubleshooting of network and connectivity settings.
 
 [Echo Protocol](https://en.wikipedia.org/wiki/Echo_Protocol)
+![echo]("/media/echoserver.png")
 
 Services around todays approach that most developers need to have some grasp of each segment, the goal of this text is to get you enlightened into troubleshooting your systems around building subnets and network to be able to connect your database server, web server and whatever external services for your firewall.
 

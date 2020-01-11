@@ -1,12 +1,15 @@
 ---
 title: " 🎶 -> 🤖 = hmm. Music Genre Classification"
-date: 2019-11-17
-published: true
-tags: ["deep-learning", "audio", "gcp"]
-cover_image: "./images/music-genre-classification.png"
-series: true
-canonical_url: false
+date: "2019-11-17T22:40:32.169Z"
+template: "post"
+draft: false
+slug: "2-sum"
+category: "algorithms"
+tags:
+  - "deep-learning"
+  - "audio"
 description: "Music Genre Classification using fastai and deploy on GCP"
+socialImage: "./images/music-genre-classification.png"
 ---
 # 🤖🎶 Music Genre Classification
 Build a machine learning (ML) model that takes audio files as input and returns a corresponding music genre.
@@ -29,8 +32,8 @@ Build a machine learning (ML) model that takes audio files as input and returns 
 ## Approach
 
 ### Outcome of assignment
-**Expected outcome** 
-- fastai library for model predictions 
+**Expected outcome**
+- fastai library for model predictions
 - serving the model in GCP w. their new custom prediction model function.
 
 **Actual outcome**
@@ -62,7 +65,7 @@ upload - image from `docs/img_data/*`
     1. Challenge here was that GCP does not natively support `pytorch` models. March GCP released custom prediction capabilities and wanted to get my hands dirty [Serving a PyTorch text classifier on AI Platform Serving using custom online prediction](https://cloud.google.com/blog/products/ai-machine-learning/ai-in-depth-serving-a-pytorch-text-classifier-on-ai-platform-serving-using-custom-online-prediction)
     2. Challenge number 2 is that preprocessing can be dealt w. lambda functionality of the keras library. Hopefully we can make the preprocessing of the audio file into a image using the lambdas of keras. See [preprocessing w. lambda keras](https://towardsdatascience.com/writing-custom-keras-generators-fe815d992c5a)
     3. Challenge number 3 is use case. What is the actual use case of this? Depending on that :
-	
+
 		Challenge number 2 might not even be relevant as we might only need this music-genre classification for post analytics. And therefore could postprocess data another way to skip the preprocessing directly from the api.
 
 
@@ -79,7 +82,7 @@ https://colab.research.google.com/drive/1R4F85FIf0xdmEjeUm38WH4RhBgC_GGUf
 ```bash
 $ make create-model
 OK
-$ make create-version 
+$ make create-version
 gcloud alpha ai-platform versions create v2 --model music_genre_classification \
 	--origin=gs://music-genre-classification/music-genre-v1.0.0/ \
 	--python-version=3.5 \
@@ -87,7 +90,7 @@ gcloud alpha ai-platform versions create v2 --model music_genre_classification \
 	--package-uris=gs://music-genre-classification/python-prediction/music_genre_prediction-0.1.tar.gz \
 	--machine-type=mls1-c4-m4 \
 	--prediction-class=model.CustomModelPrediction
-Creating version (this might take a few minutes)......failed.                             
+Creating version (this might take a few minutes)......failed.
 ERROR: (gcloud.alpha.ai-platform.versions.create) Create Version failed. Bad model detected with error:  "Failed to load model: User-provided package music_genre_prediction-0.1.tar.gz failed to install: Command '['python-default', '-m', 'pip', 'install', '--target=/tmp/custom_lib', '--no-cache-dir', '-b', '/tmp/pip_builds', '/tmp/custom_code/music_genre_prediction-0.1.tar.gz']' returned non-zero exit status 1 (Error code: 0)"
 make: *** [Makefile:88: create-version] Error 1
 ```
@@ -95,7 +98,7 @@ make: *** [Makefile:88: create-version] Error 1
 ## New Approach since the GCP AI Platform did not allow for deploying Pytorch models
 5. Deploy on Google App Engine
 
-6. Following the [fastai guide](https://course.fast.ai/deployment_google_app_engine.html) on the fastai website. 
+6. Following the [fastai guide](https://course.fast.ai/deployment_google_app_engine.html) on the fastai website.
 	1. make a downloadable link of the model that you train
 	3. deploy the app. Need to be EXACTLY the number of classes your are prediction w. the model. (This happened to be the cause of some unexplainable error)
 

@@ -1,6 +1,19 @@
+---
+title: "How to spot a recession"
+date: "2019-11-18T22:40:32.169Z"
+template: "post"
+draft: false
+slug: "how-to-spot-a-recession"
+category: "algorithms"
+tags:
+  - "philosophy"
+description: "Predicting a recession using simple metrics"
+socialImage: ""
+---
+
 # How to spot a recession
 
-Do we actually live in a recession currently? We are overwhelmed with information about the recession coming or not. Why would you want to spot a recession? 
+Do we actually live in a recession currently? We are overwhelmed with information about the recession coming or not. Why would you want to spot a recession?
 - You can for sure invest correctly in the market
 - Know that times might get a bit worse
 - Generally recessions is a good time for investments as well

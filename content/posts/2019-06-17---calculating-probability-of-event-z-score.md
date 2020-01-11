@@ -1,14 +1,16 @@
 ---
 title: "Calculating the Probability of some Event (E)"
-date: 2019-06-17
-published: true
-tags: ["statistics", "probability"]
-cover_image: ""
-series: false
-canonical_url: false
+date: "2019-06-17T22:40:32.169Z"
+template: "post"
+draft: false
+slug: "calculating-probability-of-event-z-score"
+category: "Typography"
+tags:
+  - "statistics"
+  - "probability"
 description: "How to calculate the Probability of an event occuring by also using the Z-score"
+socialImage: ""
 ---
-
 
 Probability can be used to describe the relationship between given values and the chance/probability of some event occuring.
 This post will outline how we describe probability of some event given a fitted distribution.

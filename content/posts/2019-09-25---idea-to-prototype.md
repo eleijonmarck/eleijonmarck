@@ -1,12 +1,15 @@
 ---
 title: "Idea to prototype"
-date: 2019-09-25
-published: true
-tags: ["ui", "app", "ux", "prototype"]
-cover_image: ""
-series: true
-canonical_url: false
+date: "2019-09-25T22:40:32.169Z"
+template: "post"
+draft: false
+slug: "idea-to-prototype.md"
+category: "software"
+tags:
+  - "design"
+  - "software"
 description: "Simple tricks to go from nothing to prototype of app"
+socialImage: ""
 ---
 # Idea to prototype
 
@@ -25,7 +28,7 @@ The concept of trial and error, some call it science, test the idea! and see wha
 ways to minimize both investment, time and feasibility. When you have your eureka moment you need to test it
 or if you have just overfitted to something that is actually not a problem at all. This is where a prototype comes in.
 Prototype means, not even a minimial vialable product, minimival lovable product; it means that you have something more than
-paper and pen. (paper and pen, could be classified as prototype in my opinion as well :) ) 
+paper and pen. (paper and pen, could be classified as prototype in my opinion as well :) )
 
 
 More information was taken from the programming showdown podcast and the blog [7 things of visual design 2017](https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda)
@@ -36,7 +39,7 @@ More on tht later, for now you need to get something on paper. Focus on clarity 
 
 todo: add picture of a super simple prototype
 
-## Designing 
+## Designing
 
 ### Introduction to UI/UX
 UI/UX is important for how the user feels and sees. During the first concept of developing [Mindflyp](https://mindflyp.com)
@@ -46,15 +49,15 @@ we had an idea, had a flow on paper and pen. But what do you want for an outcome
 Small tricks for thinking about UI/UX
 
 1. Alignment
- 
+
 2. Fonts
- 
+
 3. Colorscheme / Colorpalette
 
 
 #### Alignment
 This is not new. Since 1990 where everything was in word and powerpoint with names like (final final review sept v4.ppt)
-For ages back, powerpoints have made it clear that alignment in any presentation 
+For ages back, powerpoints have made it clear that alignment in any presentation
 was detrimental to convey information. Tools like snapping came to be (where the object you want to align magically aligns with one or more objects) which made it very easy to make alignments in any presentation/prototype.
 
 #### Font
@@ -87,9 +90,9 @@ Once every interaction is in place you can share it as a link which you can then
 ## Design algorithm
 
 1. concept of idea
- 
+
 2. prototype
- 
+
 3. test & evaluate
- 
+
 4. repeat steps 1-4

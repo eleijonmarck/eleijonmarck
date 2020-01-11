@@ -1,12 +1,16 @@
 ---
 title: "Going Broad in a graph"
-date: 2019-10-20
-published: true
-tags: ["bfs", "algorithms"]
-cover_image: ""
-series: true
-canonical_url: false
+date: "2019-10-20T22:40:32.169Z"
+template: "post"
+draft: false
+slug: "intro-to-bfs"
+category: "algorithms"
+tags:
+  - "data-structures"
+  - "algorithms"
+  - "bfs"
 description: "Going broad in a graph: Introduction to Breadth First Search"
+socialImage: ""
 ---
 # Introduction to BFS (breadth first search)
 
@@ -72,10 +76,10 @@ class Solution:
                 if grid[i][j] == "1":
                     self.bfs(grid, i, j)
                     num_count += 1
-       
+
         return num_count
 
-                    
+
     def bfs(self, grid, r, c):
         queue = collections.deque()
         queue.append((r, c))

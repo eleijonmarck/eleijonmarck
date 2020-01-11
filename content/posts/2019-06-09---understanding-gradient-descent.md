@@ -1,12 +1,16 @@
 ---
 title: "An Introduction to Gradient Descent w. Linear Regression"
-date: 2019-06-09
-published: true
-tags: ["statistics", "ml", "optimization"]
-cover_image: "./images/gradient-descent-cover.gif"
-series: false
-canonical_url: false
+date: "2019-06-09T22:40:32.169Z"
+template: "post"
+draft: false
+slug: "2-sum"
+category: "algorithms"
+tags:
+  - "statistics"
+  - "ml"
+  - "optimization"
 description: "Gradient descent is one of 'greatest hits' algorithms. This posts gives a detailed explained and walkthrough of why and how it is implemented and applied to an example for linear regression"
+socialImage: "./images/gradient-descent-cover.gif"
 ---
 
 Gradient descent is one of those “greatest hits” algorithms that can offer a new perspective for solving problems. Unfortunately, it’s rarely taught in undergraduate computer science programs. In this post I’ll give an introduction to the gradient descent algorithm, and walk through an example that demonstrates how gradient descent can be used to solve machine learning problems such as linear regression.
@@ -138,7 +142,7 @@ plot_on_top_of_data(m_guess, b_guess)
 
 
 
-#### Not the most sufficient algorithm but might work. 
+#### Not the most sufficient algorithm but might work.
 
 hmmmmmm ¯\\_(ツ)_/¯
 let's think of another approach.
@@ -153,7 +157,7 @@ let's think of another approach.
 
 
 
-Starting at the top of the mountain, we take our first step downhill in the direction specified by the negative gradient. 
+Starting at the top of the mountain, we take our first step downhill in the direction specified by the negative gradient.
 We continue this process iteratively until we get to the bottom of our graph, or to a point where we can no longer move downhill–a local minimum.
 
 ![winner](https://ml-cheatsheet.readthedocs.io/en/latest/_images/gradient_descent_demystified.png)
@@ -173,10 +177,10 @@ ${\displaystyle \operatorname {MSE} ={\frac {1}{n}}\sum _{i=1}^{n}(Y_{i}-{\hat {
 Given ${\displaystyle n}$ predictions generated to ${\hat{Y}}$, and ${\displaystyle Y}$ is the vector of observed values of the variable being predicted.
 
 ---
-Our example with 
+Our example with
 $ \hat{Y} = mx_i + b$
 
-Now let’s run gradient descent using our new loss function. There are two parameters in our lost function we can control: m (weight) and b (bias). 
+Now let’s run gradient descent using our new loss function. There are two parameters in our lost function we can control: m (weight) and b (bias).
 
 Since we need to consider the impact each one has on the final prediction, we need to use partial derivatives. We calculate the partial derivatives of the loss function with respect to each parameter and store the results in a gradient.
 
@@ -256,10 +260,10 @@ def gradient_descent_runner(points, starting_m, starting_b, learning_rate, num_i
 ```python
 number_iterations = 10000
 [m, b] = gradient_descent_runner(
-    data, 
-    m_guess, 
-    b_guess, 
-    learning_rate, 
+    data,
+    m_guess,
+    b_guess,
+    learning_rate,
     number_iterations
 )
 ```
@@ -267,11 +271,11 @@ number_iterations = 10000
 
 ```python
 print("Starting gradient descent at guess_m = {0}, guess_b = {1}".format(
-    m_guess, 
+    m_guess,
     b_guess
 ))
 print("Last gradient descent at guess_m = {0}, guess_b = {1}".format(
-    m, 
+    m,
     b
 ))
 
@@ -312,21 +316,21 @@ compute_error_for_line(m_guess, b_guess, data.values)
 
 ```python
 print("Starting gradient descent at \n guess_m = {0}, guess_b = {1}, error {2}".format(
-    m_guess, 
+    m_guess,
     b_guess,
     compute_error_for_line(m_guess, b_guess, data.values)
 ))
 print("Last gradient descent at \n guess_m = {0}, guess_b = {1}, error {2}".format(
-    m, 
+    m,
     b,
     compute_error_for_line(m, b, data.values)
 ))
 
 ```
 
-    Starting gradient descent at 
+    Starting gradient descent at
      guess_m = 2, guess_b = 1, error 838.9099083602013
-    Last gradient descent at 
+    Last gradient descent at
      guess_m = 1.4510680203998683, guess_b = 1.4510195909326549, error 111.87217648730648
 
 

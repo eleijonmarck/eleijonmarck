@@ -1,10 +1,15 @@
 ---
 title: Introduction to Algorithms
-date: 2019-09-09
-tags: ['algorithms', 'data-structures']
-canonical_url: false
-series: true
-description: ""
+date: "2019-09-09T22:40:32.169Z"
+template: "post"
+draft: false
+slug: "2-sum"
+category: "algorithms"
+tags:
+  - "data-structures"
+  - "algorithms"
+description: "Short introduction to why to learn algorithms"
+socialImage: ""
 ---
 
 This series will be covering the introduction of algorithms and their application.
@@ -23,7 +28,7 @@ If you are thinking that you are never gonna touch on these things. It might be 
 Algorithms can be traced back to the 9th century of a famous mathematician see [history of algorthms](http://cs-exhibitions.uni-klu.ac.at/index.php?id=193). Nowadays everyone talks about algorithms, which is a fancy name of saying a set of intructions to follow. Given today, should not computational power overcome the means to calculate anything. Previously 1000 characters were seen as "big" data. If we had let's say a string of 1 million characters; the computer today would be able to look through that in seconds. However what happens when we deal with all of the worlds roads or the blockchain of a specific cryptocurrency, suddenly efficiency becomes vital.
 > Study of algorithms is a combination of size of input and efficiency.
 
-How does the algorithm actually evolve given more input, and we are talking about exponential time of execution or even worse given a specific chosen algorithm for a given problem. 
+How does the algorithm actually evolve given more input, and we are talking about exponential time of execution or even worse given a specific chosen algorithm for a given problem.
 
 Algorithms can be categorised in these topics
 * Graphs (which include Trees) - minimum number of moves for Rubik's Cube
@@ -41,7 +46,7 @@ Here is an example on how to find the *peak* of a given array
 array = [0,1,2,3,4,5]
 ```
 
-Let's look at each element and see if that is bigger than the rest. 
+Let's look at each element and see if that is bigger than the rest.
 
 We would call this the straightforward algorithm for this problem.
 
@@ -72,7 +77,7 @@ array = [0,1,...n/2,...,n-1,n]
 3. Else `array[n/2]` is peak
 
 
-Given that we now "split" the input size in half each time we run the algorithm we get a time complexity of log n. 
+Given that we now "split" the input size in half each time we run the algorithm we get a time complexity of log n.
 ```
 T(n) = T(n/2) + O(1)
 ...
@@ -81,7 +86,7 @@ T(n) = O(log n)
 
 > ### Time Complexity is *O(log n)*
 
-This is EXPONENTIALLY faster. 
+This is EXPONENTIALLY faster.
 
 Just to give you a sense of what this intails:
 

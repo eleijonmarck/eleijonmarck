@@ -11,8 +11,14 @@ const NotFoundTemplate = () => {
   return (
     <Layout title={`Not Found - ${title}`} description={subtitle}>
       <Sidebar />
-      <Page title="NOT FOUND">
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <Page title="it's just a 404">
+        <div class="error">
+          {/* <image alt="feelings" class="error__image" src="/media/crying_unicorn.gif" /> */}
+          <img fluid={"../../static/media/crying_unicorn.gif"} alt="" />
+          <p>
+            What you’re looking for may have been misplaced in your Long Short Term Memory.
+        </p>
+        </div>
       </Page>
     </Layout>
   );
