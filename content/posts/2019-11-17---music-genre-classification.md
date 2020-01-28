@@ -1,9 +1,9 @@
 ---
-title: " 🎶 -> 🤖 = hmm. Music Genre Classification"
+title: "♫ -> ヅ = hmm. Music Genre Classification"
 date: "2019-11-17T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "2-sum"
+slug: "music-genre-classification"
 category: "algorithms"
 tags:
   - "deep-learning"
@@ -11,7 +11,9 @@ tags:
 description: "Music Genre Classification using fastai and deploy on GCP"
 socialImage: "./images/music-genre-classification.png"
 ---
-# 🤖🎶 Music Genre Classification
+
+![classification](/media/music-genre-classification.png)
+# ♫ - Music Genre Classification
 Build a machine learning (ML) model that takes audio files as input and returns a corresponding music genre.
 
 ### Building a model using fastai and 🚀 Deploy the model to GCP
@@ -48,7 +50,7 @@ app - https://momentum-project.appspot.com/
 
 upload - image from `docs/img_data/*`
 
-![final outcome](./docs/end_result.png)
+![final outcome](./media/end_result.png)
 
 ---
 

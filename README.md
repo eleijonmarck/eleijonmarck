@@ -1,3 +1,45 @@
+# eleijonmarck blog
+> #  A* find information
+My personal repository of knowledge
+
+# TODO:
+1. ~create routing for blog webpage~
+1. ~use katex for latex in markdown~
+0. search blogs
+1. Create initial homepage "page"
+
+## Personal blog
+### Why?
+- Learning everyday and writing about it provides me a way to share and to learn at the same time
+- @me backend > frontend. Want to learn how to navigate the frontend landscape
+- learning about Graphql (as I love graphs!), is not life just a graph?
+
+## Features
+- Beautiful and simple design.
+- Markdown for content.
+- Tags support.
+- CSS variables, SCSS & BEM for styling.
+- 100, 100, 100, 100 score on Google Lighthouse.
+
+## Install
+
+https://www.gatsbyjs.org/docs/quick-start/
+
+```bash
+$ npm install --global @gatsby/cli
+$ gatsby new gatsby-site
+```
+
+### Running
+```bash
+$ gatsby develop
+```
+
+###  Inspired by
+Inspiration from - http://blog.otoro.net/
+Gridsome starter - https://gridsome-starter-blog.netlify.com
+
+---
 <h1 align="center">
     <img alt="Lumen" title="Lumen" src="https://github.com/alxshelepenok/gatsby-starter-lumen/blob/gatsby-v2/.github/logo.png" width="140"> </br>
     Lumen

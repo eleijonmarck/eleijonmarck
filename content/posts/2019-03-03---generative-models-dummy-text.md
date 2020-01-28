@@ -3,14 +3,16 @@ title: "Generative model for text mock-data"
 date: "2019-03-03T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "generative-models-dummy-text.md"
+slug: "generative-models-dummy-text"
 category: "algorithms"
 tags:
   - "nlp"
   - "generative-model"
 description: "Any text-based entity or text-based column for upstarts or demos can be populated by generating mock data from a already learnt distribution or a encoding/decoding using textgen."
-socialImage: "./images/textgen_example.gif"
+socialImage: "/media/textgen_example.gif"
 ---
+
+![textgen](media/textgen_example.gif)
 
 tl;dr
 ```pip install textgen``` :rocket:

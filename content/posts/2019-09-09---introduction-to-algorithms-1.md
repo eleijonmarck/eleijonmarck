@@ -3,7 +3,7 @@ title: Introduction to Algorithms
 date: "2019-09-09T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "2-sum"
+slug: "introduction-to-algorithms-1"
 category: "algorithms"
 tags:
   - "data-structures"

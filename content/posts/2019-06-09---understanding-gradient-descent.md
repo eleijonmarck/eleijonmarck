@@ -3,15 +3,18 @@ title: "An Introduction to Gradient Descent w. Linear Regression"
 date: "2019-06-09T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "2-sum"
+slug: "understanding-gradient-descent"
 category: "algorithms"
 tags:
   - "statistics"
   - "ml"
   - "optimization"
 description: "Gradient descent is one of 'greatest hits' algorithms. This posts gives a detailed explained and walkthrough of why and how it is implemented and applied to an example for linear regression"
-socialImage: "./images/gradient-descent-cover.gif"
+socialImage: "/media/gradient-descent-cover.gif"
 ---
+
+![linear-regression.gif](/media/linear_regression_error.gif)
+
 
 Gradient descent is one of those “greatest hits” algorithms that can offer a new perspective for solving problems. Unfortunately, it’s rarely taught in undergraduate computer science programs. In this post I’ll give an introduction to the gradient descent algorithm, and walk through an example that demonstrates how gradient descent can be used to solve machine learning problems such as linear regression.
 
@@ -355,6 +358,8 @@ Here we have defined and the algorith works with contraints:
 **function** $F(\mathbf{x})$,  if differentiable; then ${\displaystyle F(\mathbf {a_{n}} )\geq F(\mathbf {a_{n+1}} )}$
 
 **Leading to** ($\leadsto $) a monotonic sequence $F(\mathbf {x} _{0})\geq F(\mathbf {x} _{1})\geq F(\mathbf {x} _{2})\geq \cdots,$
+
+![gradient-descent-cover.gif](/media/gradient-descent-cover.gif)
 
 # Coming back to the real world
 

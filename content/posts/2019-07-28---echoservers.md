@@ -12,6 +12,8 @@ description: "EchoServer send whatever you `$ curl localhost:4000` 'sent to it'.
 socialImage: "/media/echoserver.png"
 ---
 
+![echoserver](/media/echoserver.png)
+
 ### EchoServer
 
 > An "echo server" is a server that does nothing more than sending back whatever is sent to it. What can you use it for ? Whatever you feel like.
