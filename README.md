@@ -4,9 +4,9 @@ My personal repository of knowledge
 
 # TODO:
 1. ~create routing for blog webpage~
-1. ~use katex for latex in markdown~
-0. search blogs
-1. Create initial homepage "page"
+2. ~use katex for latex in markdown~
+3. search blogs
+4. Create initial homepage "page"
 
 ## Personal blog
 ### Why?
