@@ -30,7 +30,7 @@ desription of yarn
 Create an initial package.json, the project configuration file:
 
 ```bash
-\$ yarn init
+$ yarn init
 ```
 
 Install initial dependencies (-D flag is a development dependency):
@@ -43,7 +43,7 @@ $ yarn add -D ts-node
 Create tsconfig.json, required for tsc and ts-node, to compile TypeScript to JavaScript:
 
 ```bash
-\$ yarn tsc --init --rootDir src --outDir ./bin --esModuleInterop --lib ES2019 --module commonjs --noImplicitAny true
+$ yarn tsc --init --rootDir src --outDir ./bin --esModuleInterop --lib ES2019 --module commonjs --noImplicitAny true
 ```
 
 Create your first source file in src folder:
@@ -56,19 +56,19 @@ $ echo “console.log(‘Hello World\!\!\!’)” > src/app.ts
 Build the project:
 
 ```
-\$ yarn tsc
+$ yarn tsc
 
 tsc, TypeScript to JavaScript compiler, is located in ./node_modules/.bin/tsc. yarn resolves the path and run it with node. The command above compiles our TypeScript to JavaScript with an ouput to ./bin folder. Now, you can run the output JavaScript file, ./bin/app.js, with node:
 ```
 
 ```
-\$ node ./bin/app.js
+$ node ./bin/app.js
 ```
 
 For development purposes, ts-node is used, to run code without a compilation. ts-node will compile it on fly:
 
 ```
-\$ yarn ts-node ./src/app.ts
+$ yarn ts-node ./src/app.ts
 ```
 
 As with tsc, we run ts-node with yarn to resolve it location.
