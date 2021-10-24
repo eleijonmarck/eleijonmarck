@@ -15,15 +15,13 @@ I am a:
 - Learning Rust: [pomo](https://github.com/eleijonmarck/pomo)
 - React Native N00b - making random apps for myself
 
-[![GoLang_PostgreSQL_Python_NodeJS_JavaScript_ReactJS_](https://pimp-my-readme.webapp.io/pimp-my-readme/technology?technology=GoLang_PostgreSQL_Python_NodeJS_JavaScript_ReactJS_)](https://pimp-my-readme.webapp.io)
-
 #### Sponsor:
 
 Not now, as I am not providing value yet! :D
 
 - ⚡ Fun fact: I like to eat ice 🥶
 
-
-
-
 [![Visitor Counter for eleijonmarck](https://pimp-my-readme.webapp.io/pimp-my-readme/visitor-counter?page=eleijonmarck)](https://pimp-my-readme.webapp.io)
+
+
+[![GoLang_PostgreSQL_Python_NodeJS_JavaScript_ReactJS_](https://pimp-my-readme.webapp.io/pimp-my-readme/technology?technology=GoLang_PostgreSQL_Python_NodeJS_JavaScript_ReactJS_)](https://pimp-my-readme.webapp.io)
