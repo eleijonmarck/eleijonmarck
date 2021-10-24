@@ -5,7 +5,7 @@
 I am a:
 - Contributor: [Grafana](https://github.com/grafana/grafana) with over 44k (+offset) stars
 - Working at: [Grafana](https://www.grafana.com/)
-- Live Coder: [eleijonmarck](https://twitch.tv/eleijonmarck)
+- Live Coder: [![Twitch](https://pimp-my-readme.webapp.io/pimp-my-readme/social-media?social=Twitch)](eleijonmarck)
 - Blog: [eleijonmarck](https://eleijonmarck.dev)
 
 #### Projects:
