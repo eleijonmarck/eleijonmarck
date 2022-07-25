@@ -6,8 +6,6 @@ I am a:
 - Blog: [eleijonmarck](https://eleijonmarck.dev)
 - Live Coder on Twitch 
 
-### ⚙️ You can find me on
-
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/eleijonmarck/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://twitter.com/eleijonmarck)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg' alt='stackoverflow' height='40'>](https://stackoverflow.com/3767229/eleijonmarck)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/icloud.svg' alt='website' height='40'>](https://eleijonmarck.dev/)
 
 #### Projects:
