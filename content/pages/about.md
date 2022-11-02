@@ -19,7 +19,9 @@ I found my passion during my studies and I have since then dived deep into the w
 
 ## Projects that are half done, half finished, half fun
 Playing around with service-workers to build a PWA for myself of a session and task management tool - https://zentered.netlify.app/
+
 Learning Rust by building a Pomodoro app in the terminal - https://github.com/eleijonmarck/pomo
+
 Educating about compounding interest in saving money over time - https://monys.netlify.app/scenario
 
 ## [Tony Robbins - Mastery University 2020](https://www.tonyrobbins.com/mastery-university/)
