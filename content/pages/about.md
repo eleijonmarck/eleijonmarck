@@ -17,7 +17,14 @@ I'm a philosopher/tech/happy guy at heart. I love data-driven innovation or rath
 
 I found my passion during my studies and I have since then dived deep into the world of ML/AI, optimization of data-processing or the trenches of UNIX "everything as a file" to this day. Might put some time for vim configuration (way too much time at times) ;)
 
+## Projects that are half done, half finished, half fun
+Playing around with service-workers to build a PWA for myself of a session and task management tool - https://zentered.netlify.app/
+Learning Rust by building a Pomodoro app in the terminal - https://github.com/eleijonmarck/pomo
+Educating about compounding interest in saving money over time - https://monys.netlify.app/scenario
 
+## [Tony Robbins - Mastery University 2020](https://www.tonyrobbins.com/mastery-university/)
+
+Mastery University promotes life-long learning to help me create my extraordinary life. I have attened three life-changing live events mastering all aspects of your life - mind, body, emotions, physical health, finances, time and business.
 ## [Winner - Hack for Sweden 2018](https://www.linkedin.com/company/hack-for-sweden/)
 
 ![winner](media/about-me/winner-hack-for-sweden.jpg)
@@ -28,6 +35,3 @@ Dreamteam from Stockholm AI: Eric Leijonmarck, Birger Moëll, Viktor Qvarfordt, 
 
 http://www.mynewsdesk.com/se/hack-for-sweden/pressreleases/vinnarna-av-hack-for-sweden-2018-2478241
 
-## [Tony Robbins - Mastery University 2020](https://www.tonyrobbins.com/mastery-university/)
-
-Mastery University promotes life-long learning to help me create my extraordinary life. I have attened three life-changing live events mastering all aspects of your life - mind, body, emotions, physical health, finances, time and business.
