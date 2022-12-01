@@ -17,7 +17,7 @@ I am a:
 
 #### Sponsor:
 
-Not now, as I am not providing value yet! :D
+Not as of now, as I am not providing enough value yet! :D (according to myself ofc)
 
 - ⚡ Fun fact: I like to eat ice 🥶
 
