@@ -1,7 +1,7 @@
 #### eleijonmarck
 
 I am a:
-- Contributor: [Grafana](https://github.com/grafana/grafana) with over 44k (+offset) stars
+- Contributor: [Grafana](https://github.com/grafana/grafana) with over 44k (+offset from whatever day i input this) stars
 - Working at: [Grafana](https://www.grafana.com/)
 - Blog: [eleijonmarck](https://eleijonmarck.dev)
 - Live Coder on Twitch 
@@ -12,12 +12,15 @@ I am a:
 
 - Go: Grafana, let's make metrics and data democratized 🙏
 - Neovim / Lunarvim contributor and configurer
-- Learning Rust: [pomo](https://github.com/eleijonmarck/pomo)
-- React Native N00b - making random apps for myself
+- Learning Rust
+  - [pomo](https://github.com/eleijonmarck/pomo)
+  - secret LLM project
+- Frontend N00b - making random apps for myself
+  - [zentered](https://zentered.netlify.com) an app for task management with service worker to minimze battery impact, got so tired of task management apps like centered that drained all the battery 
 
 #### Sponsor:
 
-Not as of now, as I am not providing enough value yet! :D (according to myself ofc)
+Not as of now, as I am not providing enough value yet! :D (according to myself)
 
 - ⚡ Fun fact: I like to eat ice 🥶
 
