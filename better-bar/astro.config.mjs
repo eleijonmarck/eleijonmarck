@@ -3,7 +3,6 @@ import svelte from '@astrojs/svelte';
 import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
-import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,6 +16,4 @@ export default defineConfig({
       target: '_blank'
     }]]
   },
-  output: "server",
-  adapter: netlify()
 });
