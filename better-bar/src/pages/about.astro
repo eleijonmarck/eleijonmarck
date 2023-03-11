@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import bla from "./../../public/assets/about-illustration.webp";
 
 const title = "About";
 const description = "A blog about ml/ai/philosophy/health/tech";
@@ -16,7 +17,7 @@ const permalink = `${Astro.site.href}about`;
     <h1>About</h1>
     <figure class="about-image">
       <img
-        src="/assets/about-illustration.webp"
+        src={bla}
         alt="Illustration of a notebook"
         width="330"
       />
