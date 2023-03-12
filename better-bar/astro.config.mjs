@@ -11,8 +11,8 @@ export default defineConfig({
     shikiConfig: {
       theme: 'nord'
     },
-    rehypePlugins: [['rehype-external-links', {
-      target: '_blank'
-    }]]
+    /* rehypePlugins: [['rehype-external-links', { */
+    /*   target: '_blank' */
+    /* }]] */
   },
 });

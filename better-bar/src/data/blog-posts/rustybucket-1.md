@@ -100,7 +100,7 @@ Just when I thought I had cleverly outwitted the Rust compiler's optimizations 
 
 Running this benchmark does however pose a problem as rust has optimization strategies for their compiler to disgard the function calls of slicing the series to only do it once. DAMN you rust toooo smooth. Instead one has to invoke a `black_box` call on top of the function being tested. The `test::black_box` function is an identity function that hints to the compiler to be maximally pessimistic about what `black_box` could do. All together we got out first benchmark test that actually did not have `0 ns/iter` but `412 ns/iter`, resulting in infinite performance regression 🤣.
 
-![benchmark](/assets/rust-infinite-perf-regression.png)
+![perf-regression](/assets/rust-infinite-perf-regression.png)
 
 I integrated benchmark testing into the continuous integration (CI) process for my project. This practice of including performance testing as part of CI is known as performance-driven development. Most programming languages and critical systems where performance is crucial (e.g. financial systems) implement this.
 
