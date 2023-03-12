@@ -86,7 +86,7 @@ alt.Chart(data=df).mark_line().encode(
 
 
 
-![png](/media/calculating-probability-of-event-z-score/output_6_0.png)
+![png](/assets/calculating-probability-of-event-z-score/output_6_0.png)
 
 
 
@@ -133,7 +133,7 @@ line + rule
 
 
 
-![png](/media/calculating-probability-of-event-z-score/output_8_0.png)
+![png](/assets/calculating-probability-of-event-z-score/output_8_0.png)
 
 
 

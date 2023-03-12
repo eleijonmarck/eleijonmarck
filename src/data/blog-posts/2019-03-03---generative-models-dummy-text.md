@@ -9,7 +9,7 @@ tags:
   - "nlp"
   - "generative-model"
 description: "Any text-based entity or text-based column for upstarts or demos can be populated by generating mock data from a already learnt distribution or a encoding/decoding using textgen."
-socialImage: "/media/textgen_example.gif"
+socialImage: "/assets/textgen_example.gif"
 ---
 
 ![textgen](media/textgen_example.gif)
