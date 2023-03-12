@@ -14,27 +14,6 @@ const permalink = `${Astro.site.href}about`;
 >
   <div class="container">
     <h1>About</h1>
-    <figure class="about-image">
-      <img
-        src="/assets/about-illustration.webp"
-        alt="Illustration of a notebook"
-        width="330"
-      />
-      <figcaption>
-        Illustration by
-        <a
-          href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6"
-          target="_blank"
-          rel="noopener">Icons 8</a
-        >
-        from
-        <a
-          href="https://icons8.com/illustrations"
-          target="_blank"
-          rel="noopener">Ouch!</a
-        >
-      </figcaption>
-    </figure>
     <p>
       <p>
         I'm a philosopher/tech/happy guy at heart. I love data-driven innovation
@@ -72,8 +51,9 @@ const permalink = `${Astro.site.href}about`;
         </li>
       </ul>
       <h2>
-        [Tony Robbins - Mastery University
-        2020](https://www.tonyrobbins.com/mastery-university/)
+        <a href="https://www.tonyrobbins.com/mastery-university/">
+Tony Robbins - Mastery University 2020
+          </a>
       </h2>
       <p>
         Mastery University promotes life-long learning to help me create my
@@ -82,11 +62,12 @@ const permalink = `${Astro.site.href}about`;
         health, finances, time and business.
       </p>
       <h2>
-        [Winner - Hack for Sweden
-        2018](https://www.linkedin.com/company/hack-for-sweden/)
+        <a href="https://www.linkedin.com/company/hack-for-sweden/">
+        Winner - Hack for Sweden 2018
+        </a>
       </h2>
       <figure class="image">
-        <img src="media/about-me/winner-hack-for-sweden.jpg" alt="winner" />
+        <img src="/assets/winner-hack-for-sweden.jpg" alt="winner" />
         <figcaption>
           "They found a way to solve a big social problem and a big challenge
           and they did it by finding a way to quicker find the right job. They

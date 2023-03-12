@@ -1,7 +1,6 @@
-import { defineConfig } from 'astro/config';
-import svelte from '@astrojs/svelte';
-import mdx from '@astrojs/mdx';
-
+import { defineConfig } from 'astro/config'
+import svelte from '@astrojs/svelte'
+import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,10 +8,15 @@ export default defineConfig({
   integrations: [mdx(), svelte()],
   markdown: {
     shikiConfig: {
-      theme: 'nord'
+      theme: 'nord',
     },
-    rehypePlugins: [['rehype-external-links', {
-       target: '_blank'
-     }]],
+    rehypePlugins: [
+      [
+        'rehype-external-links',
+        {
+          target: '_blank',
+        },
+      ],
+    ],
   },
-});
+})
