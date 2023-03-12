@@ -86,7 +86,7 @@ alt.Chart(data=df).mark_line().encode(
 
 
 
-![png](/assets/calculating-probability-of-event-z-score/output_6_0.png)
+![png](/assets/blog/calculating-probability-of-event-z-score/output_6_0.png)
 
 
 
@@ -133,7 +133,7 @@ line + rule
 
 
 
-![png](/assets/calculating-probability-of-event-z-score/output_8_0.png)
+![png](/assets/blog/calculating-probability-of-event-z-score/output_8_0.png)
 
 
 
@@ -201,7 +201,7 @@ alt.Chart(data=df).mark_line().encode(
 
 
 
-![png](./images/calculating-probability-of-event-z-score/output_12_0.png)
+![png](/assets/blog/calculating-probability-of-event-z-score/output_12_0.png)
 
 
 
@@ -252,7 +252,7 @@ line + (rule + rule2)
 
 
 
-![png](./images/calculating-probability-of-event-z-score/output_13_0.png)
+![png](/assets/blog/calculating-probability-of-event-z-score/output_13_0.png)
 
 
 

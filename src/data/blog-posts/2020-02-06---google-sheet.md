@@ -31,14 +31,14 @@ gist:
 We need to have a project setup in google to be able to create service accounts and enable apis to be called. This could also be connected to your exisiting project within google of course.
 > This could also be connected to your exisiting project within google of course!
 
-![project](media/google-sheet/project.gif)
+![project](/assets/blog/google-sheet/project.gif)
 
 
 ## Enable APIs
 
 When we have our project to within our organization, this project enables us to grant access or your admin to the apis for Google Drive and Google Sheets. This essentially starts the apis on googles end to be able to be consumed. For instructions follow the video:
 
-![apis](media/google-sheet/enable_api.gif)
+![apis](/assets/blog/google-sheet/enable_api.gif)
 
 
 ## Service Account
@@ -49,7 +49,7 @@ What we will do is basically tell google to:
 - a service account (an email and a user within the platform with extra priviliges) exist with access rights
 - the service account is granted access over the g-suite instance (meaning sharing, creating, deleting)
 
-![service-account](media/google-sheet/service-account.gif)
+![service-account](/assets/blog/google-sheet/service-account.gif)
 
 ---
 <center><h3 style="color:#ff6f69">Warning</h3></center>
@@ -62,7 +62,7 @@ Be wary that this service account has now been granted access across the organiz
 Create the key and download the key. Please again be wary and store this key in an approriate place like 1password and do not version control it.
 Best way is to encrypt the file with GPG.
 
-![key](media/google-sheet/key.gif)
+![key](/assets/blog/google-sheet/key.gif)
 
 The key is going to look something like this:
 

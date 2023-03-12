@@ -11,7 +11,7 @@ description: "A neural network to play frappy bird with a genetic algorithm with
 socialImage: "./images/flappy.gif"
 ---
 
-![flappy](/assets/flappy.gif)
+![flappy](/assets/blog/flappy.gif)
 
 During the holidays I got to have some fun together with [JonasRSV](https://github.com/JonasRSV) (he is top 0.3 % on a few kaggle competitions and a wonderfully kind human being). He and his friend have developed [flappyMind](https://github.com/JonasRSV/flappyMind) a genetic algorithm solution for FlappyBird. This approach also provides the corresponding learning curve for each agent in a plot. This way you can see the development of the agents as they traverse the different generations.
 

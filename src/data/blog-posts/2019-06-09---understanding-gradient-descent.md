@@ -13,7 +13,7 @@ description: "Gradient descent is one of 'greatest hits' algorithms. This posts 
 socialImage: "/assets/gradient-descent-cover.gif"
 ---
 
-![linear-regression.gif](/assets/linear_regression_error.gif)
+![linear-regression.gif](/assets/blog/gradient-descent/linear_regression_error.gif)
 
 
 Gradient descent is one of those “greatest hits” algorithms that can offer a new perspective for solving problems. Unfortunately, it’s rarely taught in undergraduate computer science programs. In this post I’ll give an introduction to the gradient descent algorithm, and walk through an example that demonstrates how gradient descent can be used to solve machine learning problems such as linear regression.
@@ -42,7 +42,7 @@ scatter
 
 
 
-![png](./images/gradient-descent/output_4_0.png)
+![png](/assets/blog/gradient-descent/output_4_0.png)
 
 
 
@@ -98,12 +98,7 @@ b_guess = model.intercept_
 make_line_using(m_guess, b_guess)
 ```
 
-
-
-
-![png](./images/gradient-descent/output_7_0.png)
-
-
+![png](/assets/blog/gradient-descent/output_7_0.png)
 
 # Now let's try to implement this ourselves!
 
@@ -141,7 +136,7 @@ plot_on_top_of_data(m_guess, b_guess)
 
 
 
-![png](./images/gradient-descent/output_11_0.png)
+![png](/assets/blog/gradient-descent/output_11_0.png)
 
 
 
@@ -359,7 +354,7 @@ Here we have defined and the algorith works with contraints:
 
 **Leading to** ($\leadsto $) a monotonic sequence $F(\mathbf {x} _{0})\geq F(\mathbf {x} _{1})\geq F(\mathbf {x} _{2})\geq \cdots,$
 
-![gradient-descent-cover.gif](/assets/gradient-descent-cover.gif)
+![gradient-descent-cover.gif](/assets/blog/gradient-descent/gradient-descent-cover.gif)
 
 # Coming back to the real world
 

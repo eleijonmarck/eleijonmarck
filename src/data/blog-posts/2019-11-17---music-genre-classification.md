@@ -12,7 +12,7 @@ description: "Music Genre Classification using fastai and deploy on GCP"
 socialImage: "./images/music-genre-classification.png"
 ---
 
-![classification](/assets/music-genre-classification.png)
+![classification](/assets/blog/music-genre-classification.png)
 # ♫ - Music Genre Classification
 Build a machine learning (ML) model that takes audio files as input and returns a corresponding music genre.
 
@@ -49,9 +49,6 @@ Out of interest of time. The model is only trained on 2 classes `['classical', '
 app - https://momentum-project.appspot.com/
 
 upload - image from `docs/img_data/*`
-
-![final outcome](./assets/end_result.png)
-
 ---
 
 ## Approach

@@ -16,7 +16,7 @@ socialImage: ""
 
 As always we want to start of by talking about why we would actually be learning this material. BFS is a algorithm used to traverse a set of paths to find the "shortest path" to something in a graph problem; solving problems such as minimum steps of solving the Rubik's Cube. Do not get discouraged because of solving it as a graph; since most problems can be converted into a graph problem and sometimes in a few steps. Why are we getting the "shortest" path tough; we are searching on a broad approach and exploring the field within that level fully before actually traversing to the next level of depth of a problem. For example analyzing networks, mapping routes, and scheduling are graph problems.
 
-![hackerearth](images/bfs/bfs_level_traversal.jpg)
+![hackerearth](/assets/blog/bfs/bfs_level_traversal.jpg)
 
 > BFS is a algorithm used to traverse a set of paths to find the "shortest path" to something in a graph problem; solving problems such as minimum steps of solving the Rubik's Cube
 
@@ -25,7 +25,7 @@ As always we want to start of by talking about why we would actually be learning
 The act of searching or traversing through a graph data structure is fairly simple: it just means that we’re probably visiting every single vertex (and by proxy, every single edge) in the graph. At it’s very core, the only difference between traversing a graph by breadth or by depth is the order in which we visit the vertices in a graph. In other words, the order in which the vertices of a graph are visited is actually how we can classify different graph traversal algorithms.
 In both tree and graph traversal, the DFS algorithm uses a stack data structure. By comparison, the breadth-first search algorithm traverses broadly into a structure, by visiting neighboring sibling nodes before visiting children nodes. In both tree and graph traversal, the BFS algorithm implements a queue data structure.
 
-![bfs_vs_dfs](images/bfs/bfs_vs_dfs.jpeg)
+![bfs_vs_dfs](/assets/blog/bfs/bfs_vs_dfs.jpeg)
 
 > In both tree and graph traversal, the DFS algorithm uses a stack data structure. By comparison, the breadth-first search algorithm traverses broadly into a structure, by visiting neighboring sibling nodes before visiting children nodes. In both tree and graph traversal, the BFS algorithm implements a queue data structure.
 

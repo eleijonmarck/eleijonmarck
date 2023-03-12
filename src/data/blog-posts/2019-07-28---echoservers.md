@@ -12,7 +12,7 @@ description: "EchoServer send whatever you `$ curl localhost:4000` 'sent to it'.
 socialImage: "/assets/echoserver.png"
 ---
 
-![echoserver](/assets/echoserver.png)
+![echoserver](/assets/blog/echoserver.png)
 
 ### EchoServer
 
@@ -21,7 +21,6 @@ socialImage: "/assets/echoserver.png"
 Practical application of using echoservers is troubleshooting of network and connectivity settings.
 
 [Echo Protocol](https://en.wikipedia.org/wiki/Echo_Protocol)
-![echo]("/assets/echoserver.png")
 
 Services around todays approach that most developers need to have some grasp of each segment, the goal of this text is to get you enlightened into troubleshooting your systems around building subnets and network to be able to connect your database server, web server and whatever external services for your firewall.
 

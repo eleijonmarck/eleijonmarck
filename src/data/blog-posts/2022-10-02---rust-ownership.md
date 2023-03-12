@@ -17,7 +17,7 @@ Part of the success of why Rust is popular for performance AND safety is due to 
 
 I briefly want to touch upon why the previous approaches have been successful and vital upon on til today. C as a programming language is still by far the most performant, given that you handle the memory allocation as perfect as can be. There is no need for the runtime to have a separate service (the garbage collector) to handle pointers and memory allocation because in C, it assumes you have allocated and free memory appropriately. In languages like Go/Java or any other language using a garbage collector, we leave the memory management up to the runtime garbage collector, this makes for overhead during runtime where the garbage collector needs to take up time from the application running to remove memory where memory stored in the heap is no longer needed.
 
-### Why are we talking about this? :thinking_face:
+### Why are we talking about this? 🤔 
 Performance and safety can be made together, as performance comes with runtime not having a garbage collector and safety comes when memory allocation happens only when needed. If you want a performant application (i am talking about performant software, where most bytes allocated counts and milliseconds for a service upstart of handling matters) than a garbage collector can slow the application down. It is also vital for security as most of the security loop holes come from bad memory management, see [microsoft post of 70%](https://www.zdnet.com/article/microsoft-70-percent-of-all-security-bugs-are-memory-safety-issues/) of their security bugs come from bad memory management in their software. This is where Rust has introduced ownership.
 
 ## Ownership

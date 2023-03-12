@@ -12,7 +12,7 @@ description: "Any text-based entity or text-based column for upstarts or demos c
 socialImage: "/assets/textgen_example.gif"
 ---
 
-![textgen](media/textgen_example.gif)
+![textgen](/assets/blog/textgen_example.gif)
 
 tl;dr
 ```pip install textgen``` :rocket:
