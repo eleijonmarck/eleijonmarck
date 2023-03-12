@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="astro-37FXCHFA">
+<head>
+  <!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+<!-- Primary Meta Tags -->
+<title>♫ -&gt; ヅ = hmm. Music Genre Classification</title>
+<meta name="title" content="♫ -> ヅ = hmm. Music Genre Classification">
+<meta name="description" content="Music Genre Classification using fastai and deploy on GCP">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://astro-blog-template.netlify.app/2019-11-17---music-genre-classification">
+<meta property="og:title" content="♫ -> ヅ = hmm. Music Genre Classification">
+<meta property="og:description" content="Music Genre Classification using fastai and deploy on GCP">
+<meta property="og:image" content="https://astro-blog-template.netlify.app/assets/social.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://astro-blog-template.netlify.app/2019-11-17---music-genre-classification">
+<meta property="twitter:title" content="♫ -> ヅ = hmm. Music Genre Classification">
+<meta property="twitter:description" content="Music Genre Classification using fastai and deploy on GCP">
+<meta property="twitter:image" content="https://astro-blog-template.netlify.app/assets/social.png">
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+<link rel="stylesheet" href="/_astro/about.1d73de66.css" />
+<link rel="stylesheet" href="/_astro/_slug_.6402d670.css" /><script type="module">const e=document.documentElement,t=localStorage.getItem("theme");t==="dark"||!t&&window.matchMedia("(prefers-color-scheme: dark)").matches?e.classList.add("theme-dark"):e.classList.remove("theme-dark");
+</script></head>
+<body class="astro-37FXCHFA">
+  <div class="layout astro-37FXCHFA">
+    
+
+<header class="astro-3EF6KSR2">
+  
+
+<a href="/" class="astro-TVRURPNS">
+  <img alt="Blog Logo" src="/assets/logo.webp" width="75" height="50" class="astro-TVRURPNS">
+</a>
+  
+
+<nav class="astro-DMQPWCEC">
+  <a class=" astro-DMQPWCEC" href="/">home</a>
+  <a class=" astro-DMQPWCEC" href="/about">about</a>
+  <a class="selected astro-DMQPWCEC" href="/blog">blog</a>
+  <div class="theme-toggle-container astro-DMQPWCEC">
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="lJg73" component-url="/_astro/ThemeToggleButton.be461bb1.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;class&quot;:[0,&quot;astro-DMQPWCEC&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle"><label class=""><!-- HTML_TAG_START --><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+        clip-rule="evenodd"
+      />
+    </svg><!-- HTML_TAG_END -->
+      <input type="radio" name="theme-toggle"  value="light" title="Use light theme" aria-label="Use light theme">
+    </label><label class=""><!-- HTML_TAG_START --><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+    </svg><!-- HTML_TAG_END -->
+      <input type="radio" name="theme-toggle"  value="dark" title="Use dark theme" aria-label="Use dark theme">
+    </label></div></astro-island>
+  </div>
+</nav>
+</header>
+
+    <main class="astro-37FXCHFA">
+      <header class="astro-4SN4ZG3R">
+    <p class="astro-4SN4ZG3R">2019-11-17T22:40:32.169Z ~ 5 min read</p>
+    <h1 class="astro-4SN4ZG3R">♫ -&gt; ヅ = hmm. Music Genre Classification</h1>
+    <hr class="astro-4SN4ZG3R">
+  </header><div class="container astro-4SN4ZG3R">
+    <article class="content astro-4SN4ZG3R">
+      <p><img src="/media/music-genre-classification.png" alt="classification"></p>
+<h1 id="---music-genre-classification">♫ - Music Genre Classification</h1>
+<p>Build a machine learning (ML) model that takes audio files as input and returns a corresponding music genre.</p>
+<h3 id="building-a-model-using-fastai-and--deploy-the-model-to-gcp">Building a model using fastai and 🚀 Deploy the model to GCP</h3>
+<h2 id="gist-of-everything">Gist of everything</h2>
+<ul>
+<li>
+<p>In <a href="#approach">approach</a> lies all the steps taken</p>
+</li>
+<li>
+<p>this <a href="https://cloud.google.com/blog/products/ai-machine-learning/ai-in-depth-serving-a-pytorch-text-classifier-on-ai-platform-serving-using-custom-online-prediction" target="_blank" rel="nofollow">cloud.google.article</a> contains all the information about the deploying pytorch on GCP.</p>
+</li>
+<li>
+<p>2 colab notebooks for creating data set and training model</p>
+</li>
+<li>
+<p>repo for deploying the model on GCP for GCE</p>
+</li>
+<li>
+<p>presentation given at Epidemic Sound 2019 <a href="https://docs.google.com/presentation/d/1WPgr9Y12DlzH3dkNjmi3Co77qIVgFOlim7SmEvzflX4/edit?usp=sharing" target="_blank" rel="nofollow">music-genre-classfication</a></p>
+</li>
+<li>
+<p><a href="https://colab.research.google.com/drive/1CVMaHoJT_ECLADdRyyzqteVT-6oV-unb" target="_blank" rel="nofollow">creating data set</a></p>
+</li>
+<li>
+<p><a href="https://colab.research.google.com/drive/1R4F85FIf0xdmEjeUm38WH4RhBgC_GGUf" target="_blank" rel="nofollow">training model</a></p>
+</li>
+<li>
+<p>google app engine deployment repo is here <a href="https://github.com/eleijonmarck/music-genre-app-engine" target="_blank" rel="nofollow">https://github.com/eleijonmarck/music-genre-app-engine</a></p>
+</li>
+</ul>
+<h2 id="approach">Approach</h2>
+<h3 id="outcome-of-assignment">Outcome of assignment</h3>
+<p><strong>Expected outcome</strong></p>
+<ul>
+<li>fastai library for model predictions</li>
+<li>serving the model in GCP w. their new custom prediction model function.</li>
+</ul>
+<p><strong>Actual outcome</strong></p>
+<ul>
+<li>trained fastai library for model predictions</li>
+<li>serving the model in GCP w. Google App Engine</li>
+</ul>
+<blockquote>
+<h2 id="outcome">Outcome</h2>
+</blockquote>
+<p>Out of interest of time. The model is only trained on 2 classes <code>['classical', 'blues']</code></p>
+<p>app - <a href="https://momentum-project.appspot.com/" target="_blank" rel="nofollow">https://momentum-project.appspot.com/</a></p>
+<p>upload - image from <code>docs/img_data/*</code></p>
+<p><img src="./media/end_result.png" alt="final outcome"></p>
+<hr>
+<h2 id="approach-1">Approach</h2>
+<h3 id="training-the-model">Training the model</h3>
+<ol start="0">
+<li>Download data</li>
+<li>Find out research around the area of predicting music genre w. this particular data set.
+<ol>
+<li>Found out about MelSpectrograms for predicting the whole songs seems to be the silver standard (not cutting edge).</li>
+</ol>
+</li>
+<li>Using <a href="https://course.fast.ai/" target="_blank" rel="nofollow">fastaiv3</a> for learning about the library of image classification and its approach to making a first model.</li>
+<li>Creating the data set for data augmentation / processing from raw audio file outputs to a Melspectrogram to represent the whole songs. (currently processed the blues, classical for interest of time) - colab: <a href="https://colab.research.google.com/drive/1CVMaHoJT_ECLADdRyyzqteVT-6oV-unb" target="_blank" rel="nofollow">https://colab.research.google.com/drive/1CVMaHoJT_ECLADdRyyzqteVT-6oV-unb</a></li>
+<li>Train a image classifier using transfer learning w. ResNet as base - colab: <a href="https://colab.research.google.com/drive/1R4F85FIf0xdmEjeUm38WH4RhBgC_GGUf" target="_blank" rel="nofollow">https://colab.research.google.com/drive/1R4F85FIf0xdmEjeUm38WH4RhBgC_GGUf</a></li>
+<li>Deploying model to GCP.
+<ol>
+<li>
+<p>Challenge here was that GCP does not natively support <code>pytorch</code> models. March GCP released custom prediction capabilities and wanted to get my hands dirty <a href="https://cloud.google.com/blog/products/ai-machine-learning/ai-in-depth-serving-a-pytorch-text-classifier-on-ai-platform-serving-using-custom-online-prediction" target="_blank" rel="nofollow">Serving a PyTorch text classifier on AI Platform Serving using custom online prediction</a></p>
+</li>
+<li>
+<p>Challenge number 2 is that preprocessing can be dealt w. lambda functionality of the keras library. Hopefully we can make the preprocessing of the audio file into a image using the lambdas of keras. See <a href="https://towardsdatascience.com/writing-custom-keras-generators-fe815d992c5a" target="_blank" rel="nofollow">preprocessing w. lambda keras</a></p>
+</li>
+<li>
+<p>Challenge number 3 is use case. What is the actual use case of this? Depending on that :</p>
+<p>Challenge number 2 might not even be relevant as we might only need this music-genre classification for post analytics. And therefore could postprocess data another way to skip the preprocessing directly from the api.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="exact-steps-made-and-challenges-presented-on-the-way">Exact steps made and challenges presented on the way</h2>
+<ol start="0">
+<li>Download data set from <a href="http://opihi.cs.uvic.ca/sound/genres.tar.gz" target="_blank" rel="nofollow">Download link</a></li>
+<li>Unzip the tar into your drive or an environment so you can pick it up from colab (as colab does not persist data)</li>
+<li>Creating the data set for training w. Melspectrograms. <a href="https://colab.research.google.com/drive/1CVMaHoJT_ECLADdRyyzqteVT-6oV-unb" target="_blank" rel="nofollow">https://colab.research.google.com/drive/1CVMaHoJT_ECLADdRyyzqteVT-6oV-unb</a></li>
+<li>Training using the newly created <code>img_data</code> using fastai in colab
+<a href="https://colab.research.google.com/drive/1R4F85FIf0xdmEjeUm38WH4RhBgC_GGUf" target="_blank" rel="nofollow">https://colab.research.google.com/drive/1R4F85FIf0xdmEjeUm38WH4RhBgC_GGUf</a></li>
+<li>deploy model using the newly created guide for <a href="https://cloud.google.com/blog/products/ai-machine-learning/ai-in-depth-serving-a-pytorch-text-classifier-on-ai-platform-serving-using-custom-online-prediction" target="_blank" rel="nofollow">deploying pytorch models for gcp</a></li>
+<li>current step/progress, when trying to deploy the custom model prediction</li>
+</ol>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #D8DEE9FF">$ make create-model</span></span>
+<span class="line"><span style="color: #D8DEE9FF">OK</span></span>
+<span class="line"><span style="color: #D8DEE9FF">$ make create-version</span></span>
+<span class="line"><span style="color: #D8DEE9FF">gcloud alpha ai-platform versions create v2 --model music_genre_classification \</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	--origin=gs://music-genre-classification/music-genre-v1.0.0/ \</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	--python-version=3.5 \</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	--runtime-version=1.13 \</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	--package-uris=gs://music-genre-classification/python-prediction/music_genre_prediction-0.1.tar.gz \</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	--machine-type=mls1-c4-m4 \</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	--prediction-class=model.CustomModelPrediction</span></span>
+<span class="line"><span style="color: #D8DEE9FF">Creating version </span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">this might take a few minutes</span><span style="color: #ECEFF4">)</span><span style="color: #D8DEE9FF">......failed.</span></span>
+<span class="line"><span style="color: #D8DEE9FF">ERROR: </span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">gcloud.alpha.ai-platform.versions.create</span><span style="color: #ECEFF4">)</span><span style="color: #D8DEE9FF"> Create Version failed. Bad model detected with error:  </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">Failed to load model: User-provided package music_genre_prediction-0.1.tar.gz failed to install: Command '['python-default', '-m', 'pip', 'install', '--target=/tmp/custom_lib', '--no-cache-dir', '-b', '/tmp/pip_builds', '/tmp/custom_code/music_genre_prediction-0.1.tar.gz']' returned non-zero exit status 1 (Error code: 0)</span><span style="color: #ECEFF4">"</span></span>
+<span class="line"><span style="color: #D8DEE9FF">make: </span><span style="color: #81A1C1">***</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">Makefile:88: create-version</span><span style="color: #ECEFF4">]</span><span style="color: #D8DEE9FF"> Error 1</span></span></code></pre>
+<h2 id="new-approach-since-the-gcp-ai-platform-did-not-allow-for-deploying-pytorch-models">New Approach since the GCP AI Platform did not allow for deploying Pytorch models</h2>
+<ol start="5">
+<li>
+<p>Deploy on Google App Engine</p>
+</li>
+<li>
+<p>Following the <a href="https://course.fast.ai/deployment_google_app_engine.html" target="_blank" rel="nofollow">fastai guide</a> on the fastai website.</p>
+<ol>
+<li>make a downloadable link of the model that you train</li>
+<li>deploy the app. Need to be EXACTLY the number of classes your are prediction w. the model. (This happened to be the cause of some unexplainable error)</li>
+</ol>
+</li>
+<li>
+<p>Deployed app is up and running @ <a href="https://momentum-project.appspot.com/" target="_blank" rel="nofollow">https://momentum-project.appspot.com/</a></p>
+</li>
+<li>
+<p>Google App Engine does not allow requests to be built around cURL (c-language) requests. See <a href="https://stackoverflow.com/questions/2571627/curl-on-app-engine" target="_blank" rel="nofollow">curl-on-app-engine</a></p>
+</li>
+<li>
+<p>Postman request instead <a href="https://www.getpostman.com/collections/c4a2cd9410835920354c" target="_blank" rel="nofollow">https://www.getpostman.com/collections/c4a2cd9410835920354c</a></p>
+</li>
+</ol>
+<p>Would have taken some time to configura to setup <code>cURL</code> for GAE</p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #D8DEE9FF">$ curl --request POST \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --url https://momentum-project.appspot.com/analyze \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --header </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">Accept: */*</span><span style="color: #ECEFF4">'</span><span style="color: #D8DEE9FF"> \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --header </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">Accept-Encoding: gzip, deflate</span><span style="color: #ECEFF4">'</span><span style="color: #D8DEE9FF"> \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --header </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">Connection: keep-alive</span><span style="color: #ECEFF4">'</span><span style="color: #D8DEE9FF"> \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --header </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">Content-Length: 474050</span><span style="color: #ECEFF4">'</span><span style="color: #D8DEE9FF"> \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --header </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">Content-Type: multipart/form-data; boundary=--------------------------890612561901535102156936</span><span style="color: #ECEFF4">'</span><span style="color: #D8DEE9FF"> \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --header </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">Host: momentum-project.appspot.com</span><span style="color: #ECEFF4">'</span><span style="color: #D8DEE9FF"> \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --header </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">User-Agent: PostmanRuntime/7.19.0</span><span style="color: #ECEFF4">'</span><span style="color: #D8DEE9FF"> \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --header </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW</span><span style="color: #ECEFF4">'</span><span style="color: #D8DEE9FF"> \</span></span>
+<span class="line"><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF">   --form file=@/home/eleijonmarck/dev/epidemic-sound-ml-assignment/data/img_data/classical/classical00011.png</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">curl: </span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">92</span><span style="color: #ECEFF4">)</span><span style="color: #D8DEE9FF"> HTTP/2 stream 0 was not closed cleanly: PROTOCOL_ERROR </span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">err 1</span><span style="color: #ECEFF4">)</span></span></code></pre>
+<h2 id="--data">📊  Data</h2>
+<p>As a dataset, use the (<a href="https://arxiv.org/abs/1306.1461" target="_blank" rel="nofollow">in</a>)famous GTZAN Genre Collection dataset from</p>
+<blockquote>
+<p>Tzanetakis, George, and Perry Cook. “Musical genre classification of audio signals.” IEEE Transactions on speech and audio processing 10.5 (2002): 293-302.</p>
+</blockquote>
+<p><a href="http://opihi.cs.uvic.ca/sound/genres.tar.gz" target="_blank" rel="nofollow">Download link</a> and <a href="http://marsyas.info/downloads/datasets.html" target="_blank" rel="nofollow">homepage</a> for the dataset.</p>
+<h2 id="next-steps">Next steps:</h2>
+<ul>
+<li>create baseline</li>
+<li>make preprocessing step for images</li>
+<li>create embeddings of the melspectrogram features for visualizing in t-SNE</li>
+<li>signal processing for melspectrograms to create MFCC features - <a href="https://www.youtube.com/watch?v=Z7YM-HAz-IY" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=Z7YM-HAz-IY</a></li>
+</ul>
+    </article>
+    <hr class="astro-4SN4ZG3R">
+    <div class="astro-2JILUK5E">
+  <img src="/assets/eric-small.png" alt="Headshot of Maxi Ferreira" class="astro-2JILUK5E">
+  <p class="astro-2JILUK5E">
+    Hi, I'm <strong class="astro-2JILUK5E">Eric</strong>. I'm a software engineer and data scientist based in Lisbon.
+    You can follow me on <a href="https://www.twitter.com/eleijonmarck" target="_blank" class="astro-2JILUK5E">Twitter</a>,
+    see some of my work on <a href="https://www.github.com/eleijonmarck" target="_blank" class="astro-2JILUK5E">GitHub</a>,
+  </p>
+</div>
+  </div>
+    </main>
+
+    <footer class="astro-SZ7XMLTE">
+  <span class="astro-SZ7XMLTE">
+    &copy; 2023 A* information.
+    Powered by <a href="https://astro.build" target="_blank" rel="noopener" class="astro-SZ7XMLTE">Astro</a>.
+    Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener" class="astro-SZ7XMLTE">Maxi Ferreira</a>.
+  </span>
+</footer>
+  </div>
+</body></html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="astro-37FXCHFA">
+<head>
+  <!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+<!-- Primary Meta Tags -->
+<title>Data structures and algorithms - 2sum</title>
+<meta name="title" content="Data structures and algorithms - 2sum">
+<meta name="description" content="Data structures and algorithms - 2sum">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://astro-blog-template.netlify.app/2019-09-18---2-sum">
+<meta property="og:title" content="Data structures and algorithms - 2sum">
+<meta property="og:description" content="Data structures and algorithms - 2sum">
+<meta property="og:image" content="https://astro-blog-template.netlify.app/assets/social.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://astro-blog-template.netlify.app/2019-09-18---2-sum">
+<meta property="twitter:title" content="Data structures and algorithms - 2sum">
+<meta property="twitter:description" content="Data structures and algorithms - 2sum">
+<meta property="twitter:image" content="https://astro-blog-template.netlify.app/assets/social.png">
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+<link rel="stylesheet" href="/_astro/about.1d73de66.css" />
+<link rel="stylesheet" href="/_astro/_slug_.6402d670.css" /><script type="module">const e=document.documentElement,t=localStorage.getItem("theme");t==="dark"||!t&&window.matchMedia("(prefers-color-scheme: dark)").matches?e.classList.add("theme-dark"):e.classList.remove("theme-dark");
+</script></head>
+<body class="astro-37FXCHFA">
+  <div class="layout astro-37FXCHFA">
+    
+
+<header class="astro-3EF6KSR2">
+  
+
+<a href="/" class="astro-TVRURPNS">
+  <img alt="Blog Logo" src="/assets/logo.webp" width="75" height="50" class="astro-TVRURPNS">
+</a>
+  
+
+<nav class="astro-DMQPWCEC">
+  <a class=" astro-DMQPWCEC" href="/">home</a>
+  <a class=" astro-DMQPWCEC" href="/about">about</a>
+  <a class="selected astro-DMQPWCEC" href="/blog">blog</a>
+  <div class="theme-toggle-container astro-DMQPWCEC">
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="lJg73" component-url="/_astro/ThemeToggleButton.be461bb1.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;class&quot;:[0,&quot;astro-DMQPWCEC&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle"><label class=""><!-- HTML_TAG_START --><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+        clip-rule="evenodd"
+      />
+    </svg><!-- HTML_TAG_END -->
+      <input type="radio" name="theme-toggle"  value="light" title="Use light theme" aria-label="Use light theme">
+    </label><label class=""><!-- HTML_TAG_START --><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+    </svg><!-- HTML_TAG_END -->
+      <input type="radio" name="theme-toggle"  value="dark" title="Use dark theme" aria-label="Use dark theme">
+    </label></div></astro-island>
+  </div>
+</nav>
+</header>
+
+    <main class="astro-37FXCHFA">
+      <header class="astro-4SN4ZG3R">
+    <p class="astro-4SN4ZG3R">2019-09-18T22:40:32.169Z ~ 3 min read</p>
+    <h1 class="astro-4SN4ZG3R">Data structures and algorithms - 2sum</h1>
+    <hr class="astro-4SN4ZG3R">
+  </header><div class="container astro-4SN4ZG3R">
+    <article class="content astro-4SN4ZG3R">
+      <h1 id="2sum---why-it-is-such-a-good-question">2sum - why it is such a good question</h1>
+<h2 id="2sum">2sum</h2>
+<p>Given an array of random elements <code>[1, -8, 1, 2, 36, -24]</code> and a target <code>10</code>
+You are to write an algorithm to get the target from two of the elements of the given array and return their respective index as an sorted array.</p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #D8DEE9FF">target </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">10</span></span>
+<span class="line"><span style="color: #D8DEE9FF">nums </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">,</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">8</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">12</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">3</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">6</span><span style="color: #ECEFF4">,</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">2</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">4</span><span style="color: #ECEFF4">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">output </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">4</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">6</span><span style="color: #ECEFF4">]</span></span></code></pre>
+<h3 id="first-solution---naive-approach">First solution - Naive approach</h3>
+<p>To start we iterate of the array once to get the first element of the two.
+Meaning we will have a pointer from the beginning of the array to the end of the array.</p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> i </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">)):</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    first_number </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> nums</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">i</span><span style="color: #ECEFF4">]</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #88C0D0">print</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">first_number</span><span style="color: #ECEFF4">)</span></span></code></pre>
+<p>This approach means that we take the first element of the array. Adding another iteration to look for another element of the array is a bit more complicated since we have to take care of the two pointers and what they are looking at.
+First iteration, we need to take care of that the last element will be looked at from the second iteration. But how do we combine the two?</p>
+<blockquote>
+<p>But how do we combine the two?</p>
+</blockquote>
+<p>We combine the iterations by having the first index going into the second iterations. Meaning the second iterations starts of where the first iteration start plus one index forward.</p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> i </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">)):</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> j </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">i </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">)):</span></span></code></pre>
+<p>First pointer <code>i</code> starts from the beginning, but since we now have a second pointer <code>j</code> also looping through the array; this <code>j</code> will go all the way to the end. However the first pointer does not need to go to the end of the array since we have <code>j</code> taking care of that now.</p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #616E88"># first iteration will start in the beginning</span></span>
+<span class="line"><span style="color: #616E88"># i ends at next last element</span></span>
+<span class="line"><span style="color: #D8DEE9FF">nums </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">,</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">8</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">12</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">3</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">6</span><span style="color: #ECEFF4">,</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">2</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">4</span><span style="color: #ECEFF4">]</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        i</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF">...</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF">       i</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> i </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">)</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">-</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">):</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color: #616E88"># j goes from the pointer of i upto the end of the array</span></span>
+<span class="line"><span style="color: #D8DEE9FF">nums </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">,</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">8</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">12</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">3</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">6</span><span style="color: #ECEFF4">,</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">2</span><span style="color: #ECEFF4">,</span><span style="color: #B48EAD">4</span><span style="color: #ECEFF4">]</span></span>
+<span class="line"><span style="color: #D8DEE9FF">           j</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF">...</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF">      j</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> j </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">i </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">)):</span></span></code></pre>
+<p>The whole operation with checking if the two elements actually match for the target can now be calculated given the looping of the array; as we are now iterating over each possible outcome of the array.</p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #616E88"># O(n)</span></span>
+<span class="line"><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> i </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">)</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">-</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">):</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #616E88"># O(n)</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> j </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">i </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">)):</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        </span><span style="color: #81A1C1">if</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">i</span><span style="color: #ECEFF4">]</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> nums</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">j</span><span style="color: #ECEFF4">])</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">==</span><span style="color: #D8DEE9FF"> target</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">            </span><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">i</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF">j</span><span style="color: #ECEFF4">]</span></span>
+<span class="line"><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[]</span></span></code></pre>
+<p>Time and space complexity of the algorithm is n^2 due to the fact that we have a nested for loop of the entire array, but no external variables that we are saving.</p>
+<blockquote>
+<p>time: O(n^2)
+space: O(1)</p>
+</blockquote>
+<hr>
+<h1 id="second-approach">Second approach</h1>
+<p>What if we could reduce the time but use some more space? This is where we will be using a hashmap of the values that we have seen already to calculate the missing element we would want in order for us to get to the target given the current element we are on.</p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #D8DEE9FF">seen_nums </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">{}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> i </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">)):</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    diff </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> target </span><span style="color: #81A1C1">-</span><span style="color: #D8DEE9FF"> nums</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">i</span><span style="color: #ECEFF4">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #81A1C1">if</span><span style="color: #D8DEE9FF"> diff </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> seen_nums</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        </span><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">seen_nums</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">i</span><span style="color: #ECEFF4">]],</span><span style="color: #D8DEE9FF"> i</span><span style="color: #ECEFF4">]</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #81A1C1">if</span><span style="color: #D8DEE9FF"> nums</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">i</span><span style="color: #ECEFF4">]</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">not</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> seen_nums</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        seen_nums</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">nums</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">i</span><span style="color: #ECEFF4">]]</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> i</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[]</span></span></code></pre>
+<h1 id="todo">TODO:</h1>
+<h1 id="write-the-two-pointer-method-and-the-hash-method">write the two pointer method and the hash method</h1>
+    </article>
+    <hr class="astro-4SN4ZG3R">
+    <div class="astro-2JILUK5E">
+  <img src="/assets/eric-small.png" alt="Headshot of Maxi Ferreira" class="astro-2JILUK5E">
+  <p class="astro-2JILUK5E">
+    Hi, I'm <strong class="astro-2JILUK5E">Eric</strong>. I'm a software engineer and data scientist based in Lisbon.
+    You can follow me on <a href="https://www.twitter.com/eleijonmarck" target="_blank" class="astro-2JILUK5E">Twitter</a>,
+    see some of my work on <a href="https://www.github.com/eleijonmarck" target="_blank" class="astro-2JILUK5E">GitHub</a>,
+  </p>
+</div>
+  </div>
+    </main>
+
+    <footer class="astro-SZ7XMLTE">
+  <span class="astro-SZ7XMLTE">
+    &copy; 2023 A* information.
+    Powered by <a href="https://astro.build" target="_blank" rel="noopener" class="astro-SZ7XMLTE">Astro</a>.
+    Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener" class="astro-SZ7XMLTE">Maxi Ferreira</a>.
+  </span>
+</footer>
+  </div>
+</body></html>

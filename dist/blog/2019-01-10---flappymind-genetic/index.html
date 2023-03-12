@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="astro-37FXCHFA">
+<head>
+  <!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+<!-- Primary Meta Tags -->
+<title>Genetic algorithm for flappy bird</title>
+<meta name="title" content="Genetic algorithm for flappy bird">
+<meta name="description" content="A neural network to play frappy bird with a genetic algorithm with different speeds and watch the progress.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://astro-blog-template.netlify.app/2019-01-10---flappymind-genetic">
+<meta property="og:title" content="Genetic algorithm for flappy bird">
+<meta property="og:description" content="A neural network to play frappy bird with a genetic algorithm with different speeds and watch the progress.">
+<meta property="og:image" content="https://astro-blog-template.netlify.app/assets/social.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://astro-blog-template.netlify.app/2019-01-10---flappymind-genetic">
+<meta property="twitter:title" content="Genetic algorithm for flappy bird">
+<meta property="twitter:description" content="A neural network to play frappy bird with a genetic algorithm with different speeds and watch the progress.">
+<meta property="twitter:image" content="https://astro-blog-template.netlify.app/assets/social.png">
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+<link rel="stylesheet" href="/_astro/about.1d73de66.css" />
+<link rel="stylesheet" href="/_astro/_slug_.6402d670.css" /><script type="module">const e=document.documentElement,t=localStorage.getItem("theme");t==="dark"||!t&&window.matchMedia("(prefers-color-scheme: dark)").matches?e.classList.add("theme-dark"):e.classList.remove("theme-dark");
+</script></head>
+<body class="astro-37FXCHFA">
+  <div class="layout astro-37FXCHFA">
+    
+
+<header class="astro-3EF6KSR2">
+  
+
+<a href="/" class="astro-TVRURPNS">
+  <img alt="Blog Logo" src="/assets/logo.webp" width="75" height="50" class="astro-TVRURPNS">
+</a>
+  
+
+<nav class="astro-DMQPWCEC">
+  <a class=" astro-DMQPWCEC" href="/">home</a>
+  <a class=" astro-DMQPWCEC" href="/about">about</a>
+  <a class="selected astro-DMQPWCEC" href="/blog">blog</a>
+  <div class="theme-toggle-container astro-DMQPWCEC">
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="lJg73" component-url="/_astro/ThemeToggleButton.be461bb1.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;class&quot;:[0,&quot;astro-DMQPWCEC&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle"><label class=""><!-- HTML_TAG_START --><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+        clip-rule="evenodd"
+      />
+    </svg><!-- HTML_TAG_END -->
+      <input type="radio" name="theme-toggle"  value="light" title="Use light theme" aria-label="Use light theme">
+    </label><label class=""><!-- HTML_TAG_START --><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+    </svg><!-- HTML_TAG_END -->
+      <input type="radio" name="theme-toggle"  value="dark" title="Use dark theme" aria-label="Use dark theme">
+    </label></div></astro-island>
+  </div>
+</nav>
+</header>
+
+    <main class="astro-37FXCHFA">
+      <header class="astro-4SN4ZG3R">
+    <p class="astro-4SN4ZG3R">2019-01-10T22:40:32.169Z ~ 2 min read</p>
+    <h1 class="astro-4SN4ZG3R">Genetic algorithm for flappy bird</h1>
+    <hr class="astro-4SN4ZG3R">
+  </header><div class="container astro-4SN4ZG3R">
+    <article class="content astro-4SN4ZG3R">
+      <p><img src="/media/flappy.gif" alt="flappy"></p>
+<p>During the holidays I got to have some fun together with <a href="https://github.com/JonasRSV" target="_blank" rel="nofollow">JonasRSV</a> (he is top 0.3 % on a few kaggle competitions and a wonderfully kind human being). He and his friend have developed <a href="https://github.com/JonasRSV/flappyMind" target="_blank" rel="nofollow">flappyMind</a> a genetic algorithm solution for FlappyBird. This approach also provides the corresponding learning curve for each agent in a plot. This way you can see the development of the agents as they traverse the different generations.</p>
+<p>This uses a standard neural network architecture with abstractions for dealing with mutation and inheritance for the different families of generations. The model is trained faster by using the number keys &#x3C;1,..5> for rendering so the progress can be seen from each generation. If you really want to get the high score of flappy bird, just press 0 and it stops to render and just trains; once you feel like the model has been trained enough. Just press whatever rendering button speed you want.</p>
+<p>model is in</p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #D8DEE9FF">$ ls ANNGenetic</span></span>
+<span class="line"><span style="color: #D8DEE9FF">EvolutionDemoOn2Dfunction.ipynb __pycache__</span></span>
+<span class="line"><span style="color: #D8DEE9FF">README.md                       ann.py</span></span>
+<span class="line"><span style="color: #D8DEE9FF">__init__.py                     test.py </span></span></code></pre>
+<p>Rendering uses
+<code>$ cat nnplayer.py</code></p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #D8DEE9FF">...</span></span>
+<span class="line"><span style="color: #D8DEE9FF">  MEAN_SCORE</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">append</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">mean</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #D8DEE9FF">  GEN</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">append</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">GENERATION</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">  plt</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">plot</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">GEN</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> MEAN_SCORE</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #D8DEE9FF">  plt</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">show</span><span style="color: #ECEFF4">()</span></span>
+<span class="line"><span style="color: #D8DEE9FF">  plt</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">pause</span><span style="color: #ECEFF4">(</span><span style="color: #B48EAD">0.5</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #D8DEE9FF">...</span></span></code></pre>
+<h4 id="known-issues">Known issues</h4>
+<p>If you get a familiar error with (MAC OSX rendering problems :(. ))</p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #B48EAD">2019</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">0</span><span style="color: #D8DEE9">1</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">0</span><span style="color: #D8DEE9">3</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">13</span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">20</span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">45.135</span><span style="color: #D8DEE9FF"> python</span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">44873</span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">3146187</span><span style="color: #ECEFF4">]</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">-</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">SDLApplication _setup</span><span style="color: #ECEFF4">:]:</span><span style="color: #D8DEE9FF"> unrecognized selector sent to instance </span><span style="color: #81A1C1">0x</span><span style="color: #B48EAD">7f824fe98430</span></span>
+<span class="line"><span style="color: #B48EAD">2019</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">0</span><span style="color: #D8DEE9">1</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">0</span><span style="color: #D8DEE9">3</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">13</span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">20</span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">45.139</span><span style="color: #D8DEE9FF"> python</span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">44873</span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">3146187</span><span style="color: #ECEFF4">]</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">***</span><span style="color: #D8DEE9FF"> Terminating app due to uncaught exception </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">NSInvalidArgumentException</span><span style="color: #ECEFF4">'</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> reason</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">-[SDLApplication _setup:]: unrecognized selector sent to instance 0x7f824fe98430</span><span style="color: #ECEFF4">'</span></span></code></pre>
+<h2 id="solution">Solution:</h2>
+<p>Either skip the backend setup in matplotlib and take the default from MacOSx Mojave 10.14.2 (18C54)
+Install <code>$ pip install pyqt5</code></p>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #D8DEE9FF">$ </span><span style="color: #88C0D0">echo</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">""</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">~</span><span style="color: #D8DEE9FF">/.matplotlib/matplotlibrc</span></span>
+<span class="line"><span style="color: #D8DEE9FF">$ </span><span style="color: #88C0D0">echo</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">backend: Qt5Agg</span><span style="color: #ECEFF4">"</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">></span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">~</span><span style="color: #D8DEE9FF">/.matplotlib/matplotlibrc</span></span></code></pre>
+<p>Every answer gave me the same solution to my problem. Using TkAgg for backend for matplotlib.
+<a href="https://stackoverflow.com/a/34583958/3767229" target="_blank" rel="nofollow">use-.matplotlibrc</a>
+<a href="https://stackoverflow.com/a/34583958/3767229" target="_blank" rel="nofollow">explicit-use-of-matplotlib.use()</a></p>
+<h2 id="edit-2019-03-03">EDIT: 2019-03-03</h2>
+<p>found and describing same issue.
+<a href="https://stackoverflow.com/a/53852328/3767229" target="_blank" rel="nofollow">qt5-matplotlib</a></p>
+    </article>
+    <hr class="astro-4SN4ZG3R">
+    <div class="astro-2JILUK5E">
+  <img src="/assets/eric-small.png" alt="Headshot of Maxi Ferreira" class="astro-2JILUK5E">
+  <p class="astro-2JILUK5E">
+    Hi, I'm <strong class="astro-2JILUK5E">Eric</strong>. I'm a software engineer and data scientist based in Lisbon.
+    You can follow me on <a href="https://www.twitter.com/eleijonmarck" target="_blank" class="astro-2JILUK5E">Twitter</a>,
+    see some of my work on <a href="https://www.github.com/eleijonmarck" target="_blank" class="astro-2JILUK5E">GitHub</a>,
+  </p>
+</div>
+  </div>
+    </main>
+
+    <footer class="astro-SZ7XMLTE">
+  <span class="astro-SZ7XMLTE">
+    &copy; 2023 A* information.
+    Powered by <a href="https://astro.build" target="_blank" rel="noopener" class="astro-SZ7XMLTE">Astro</a>.
+    Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener" class="astro-SZ7XMLTE">Maxi Ferreira</a>.
+  </span>
+</footer>
+  </div>
+</body></html>

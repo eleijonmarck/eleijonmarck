@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="astro-37FXCHFA">
+<head>
+  <!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+<!-- Primary Meta Tags -->
+<title>Going Broad in a graph</title>
+<meta name="title" content="Going Broad in a graph">
+<meta name="description" content="Going broad in a graph: Introduction to Breadth First Search">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://astro-blog-template.netlify.app/2019-10-20---intro-to-bfs">
+<meta property="og:title" content="Going Broad in a graph">
+<meta property="og:description" content="Going broad in a graph: Introduction to Breadth First Search">
+<meta property="og:image" content="https://astro-blog-template.netlify.app/assets/social.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://astro-blog-template.netlify.app/2019-10-20---intro-to-bfs">
+<meta property="twitter:title" content="Going Broad in a graph">
+<meta property="twitter:description" content="Going broad in a graph: Introduction to Breadth First Search">
+<meta property="twitter:image" content="https://astro-blog-template.netlify.app/assets/social.png">
+
+<!-- This is intentionally inlined to avoid FOUC -->
+
+<link rel="stylesheet" href="/_astro/about.1d73de66.css" />
+<link rel="stylesheet" href="/_astro/_slug_.6402d670.css" /><script type="module">const e=document.documentElement,t=localStorage.getItem("theme");t==="dark"||!t&&window.matchMedia("(prefers-color-scheme: dark)").matches?e.classList.add("theme-dark"):e.classList.remove("theme-dark");
+</script></head>
+<body class="astro-37FXCHFA">
+  <div class="layout astro-37FXCHFA">
+    
+
+<header class="astro-3EF6KSR2">
+  
+
+<a href="/" class="astro-TVRURPNS">
+  <img alt="Blog Logo" src="/assets/logo.webp" width="75" height="50" class="astro-TVRURPNS">
+</a>
+  
+
+<nav class="astro-DMQPWCEC">
+  <a class=" astro-DMQPWCEC" href="/">home</a>
+  <a class=" astro-DMQPWCEC" href="/about">about</a>
+  <a class="selected astro-DMQPWCEC" href="/blog">blog</a>
+  <div class="theme-toggle-container astro-DMQPWCEC">
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="lJg73" component-url="/_astro/ThemeToggleButton.be461bb1.js" component-export="default" renderer-url="/_astro/client.c4e17359.js" props="{&quot;class&quot;:[0,&quot;astro-DMQPWCEC&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggleButton&quot;,&quot;value&quot;:true}" await-children=""><div class="theme-toggle"><label class=""><!-- HTML_TAG_START --><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+        clip-rule="evenodd"
+      />
+    </svg><!-- HTML_TAG_END -->
+      <input type="radio" name="theme-toggle"  value="light" title="Use light theme" aria-label="Use light theme">
+    </label><label class=""><!-- HTML_TAG_START --><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+    </svg><!-- HTML_TAG_END -->
+      <input type="radio" name="theme-toggle"  value="dark" title="Use dark theme" aria-label="Use dark theme">
+    </label></div></astro-island>
+  </div>
+</nav>
+</header>
+
+    <main class="astro-37FXCHFA">
+      <header class="astro-4SN4ZG3R">
+    <p class="astro-4SN4ZG3R">2019-10-20T22:40:32.169Z ~ 4 min read</p>
+    <h1 class="astro-4SN4ZG3R">Going Broad in a graph</h1>
+    <hr class="astro-4SN4ZG3R">
+  </header><div class="container astro-4SN4ZG3R">
+    <article class="content astro-4SN4ZG3R">
+      <h1 id="introduction-to-bfs-breadth-first-search">Introduction to BFS (breadth first search)</h1>
+<p>As always we want to start of by talking about why we would actually be learning this material. BFS is a algorithm used to traverse a set of paths to find the “shortest path” to something in a graph problem; solving problems such as minimum steps of solving the Rubik’s Cube. Do not get discouraged because of solving it as a graph; since most problems can be converted into a graph problem and sometimes in a few steps. Why are we getting the “shortest” path tough; we are searching on a broad approach and exploring the field within that level fully before actually traversing to the next level of depth of a problem. For example analyzing networks, mapping routes, and scheduling are graph problems.</p>
+<p><img src="images/bfs/bfs_level_traversal.jpg" alt="hackerearth"></p>
+<blockquote>
+<p>BFS is a algorithm used to traverse a set of paths to find the “shortest path” to something in a graph problem; solving problems such as minimum steps of solving the Rubik’s Cube</p>
+</blockquote>
+<hr>
+<h2 id="bfs-vs-dfs">BFS vs DFS</h2>
+<p>The act of searching or traversing through a graph data structure is fairly simple: it just means that we’re probably visiting every single vertex (and by proxy, every single edge) in the graph. At it’s very core, the only difference between traversing a graph by breadth or by depth is the order in which we visit the vertices in a graph. In other words, the order in which the vertices of a graph are visited is actually how we can classify different graph traversal algorithms.
+In both tree and graph traversal, the DFS algorithm uses a stack data structure. By comparison, the breadth-first search algorithm traverses broadly into a structure, by visiting neighboring sibling nodes before visiting children nodes. In both tree and graph traversal, the BFS algorithm implements a queue data structure.</p>
+<p><img src="images/bfs/bfs_vs_dfs.jpeg" alt="bfs_vs_dfs"></p>
+<blockquote>
+<p>In both tree and graph traversal, the DFS algorithm uses a stack data structure. By comparison, the breadth-first search algorithm traverses broadly into a structure, by visiting neighboring sibling nodes before visiting children nodes. In both tree and graph traversal, the BFS algorithm implements a queue data structure.</p>
+</blockquote>
+<h2 id="algorithm">Algorithm</h2>
+<p>The backbone of a breadth-first search consists of these basic steps:</p>
+<ul>
+<li>Add a node/vertex from the graph to a queue of nodes to be “visited”.</li>
+<li>Visit the topmost node in the queue, and mark it as such.</li>
+<li>If that node has any neighbors, check to see if they have been “visited” or not.</li>
+<li>Add any neighboring nodes that still need to be “visited” to the queue.</li>
+<li>Remove the node we’ve visited from the queue.</li>
+</ul>
+<h2 id="real-world-example">Real world example</h2>
+<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #616E88"># [200] Number of Islands</span></span>
+<span class="line"><span style="color: #616E88">#</span></span>
+<span class="line"><span style="color: #616E88"># https://leetcode.com/problems/number-of-islands/description/</span></span>
+<span class="line"><span style="color: #616E88">#</span></span>
+<span class="line"><span style="color: #616E88"># algorithms</span></span>
+<span class="line"><span style="color: #616E88"># Medium</span></span>
+<span class="line"><span style="color: #616E88">#</span></span>
+<span class="line"><span style="color: #616E88"># Given a 2d grid map of '1's (land) and '0's (water), count the number of</span></span>
+<span class="line"><span style="color: #616E88"># islands. An island is surrounded by water and is formed by connecting</span></span>
+<span class="line"><span style="color: #616E88"># adjacent lands horizontally or vertically. You may assume all four edges of</span></span>
+<span class="line"><span style="color: #616E88"># the grid are all surrounded by water.</span></span>
+<span class="line"><span style="color: #616E88">#</span></span>
+<span class="line"><span style="color: #616E88"># Example 1:</span></span>
+<span class="line"><span style="color: #616E88">#</span></span>
+<span class="line"><span style="color: #616E88">#</span></span>
+<span class="line"><span style="color: #616E88"># Input:</span></span>
+<span class="line"><span style="color: #616E88"># 11110</span></span>
+<span class="line"><span style="color: #616E88"># 11010</span></span>
+<span class="line"><span style="color: #616E88"># 11000</span></span>
+<span class="line"><span style="color: #616E88"># 00000</span></span>
+<span class="line"><span style="color: #616E88">#</span></span>
+<span class="line"><span style="color: #616E88"># Output: 1</span></span>
+<span class="line"><span style="color: #81A1C1">class</span><span style="color: #D8DEE9FF"> </span><span style="color: #8FBCBB">Solution</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #81A1C1">def</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">numIslands</span><span style="color: #ECEFF4">(</span><span style="color: #81A1C1">self</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">grid</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> List</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">List</span><span style="color: #ECEFF4">[</span><span style="color: #88C0D0">str</span><span style="color: #ECEFF4">]])</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">-></span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">int</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        </span><span style="color: #ECEFF4">"""</span></span>
+<span class="line"><span style="color: #A3BE8C">        :type grid: List[List[str]]</span></span>
+<span class="line"><span style="color: #A3BE8C">        :rtype: int</span></span>
+<span class="line"><span style="color: #A3BE8C">        </span><span style="color: #ECEFF4">"""</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        </span><span style="color: #81A1C1">if</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">not</span><span style="color: #D8DEE9FF"> grid </span><span style="color: #81A1C1">or</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">not</span><span style="color: #D8DEE9FF"> grid</span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">0</span><span style="color: #ECEFF4">]:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">            </span><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">0</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">        num_count </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">0</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        </span><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> i </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">grid</span><span style="color: #ECEFF4">)):</span><span style="color: #D8DEE9FF">  </span><span style="color: #616E88"># &#x3C;-- x</span></span>
+<span class="line"><span style="color: #D8DEE9FF">            </span><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> j </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">range</span><span style="color: #ECEFF4">(</span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">grid</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">i</span><span style="color: #ECEFF4">])):</span><span style="color: #D8DEE9FF">  </span><span style="color: #616E88"># &#x3C;-- y</span></span>
+<span class="line"><span style="color: #D8DEE9FF">                </span><span style="color: #81A1C1">if</span><span style="color: #D8DEE9FF"> grid</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">i</span><span style="color: #ECEFF4">][</span><span style="color: #D8DEE9FF">j</span><span style="color: #ECEFF4">]</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">==</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">1</span><span style="color: #ECEFF4">"</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">                    </span><span style="color: #81A1C1">self</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">bfs</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">grid</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> i</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> j</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #D8DEE9FF">                    num_count </span><span style="color: #81A1C1">+=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">        </span><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> num_count</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #81A1C1">def</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">bfs</span><span style="color: #ECEFF4">(</span><span style="color: #81A1C1">self</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">grid</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">r</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">c</span><span style="color: #ECEFF4">):</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        queue </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> collections</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">deque</span><span style="color: #ECEFF4">()</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        queue</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">append</span><span style="color: #ECEFF4">((</span><span style="color: #D8DEE9FF">r</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> c</span><span style="color: #ECEFF4">))</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        grid</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">r</span><span style="color: #ECEFF4">][</span><span style="color: #D8DEE9FF">c</span><span style="color: #ECEFF4">]</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">0</span><span style="color: #ECEFF4">"</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        </span><span style="color: #81A1C1">while</span><span style="color: #D8DEE9FF"> queue</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">            directions </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">[(</span><span style="color: #B48EAD">0</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">),</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">(</span><span style="color: #B48EAD">0</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">),</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">(</span><span style="color: #81A1C1">-</span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">0</span><span style="color: #ECEFF4">),</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">(</span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">0</span><span style="color: #ECEFF4">)]</span></span>
+<span class="line"><span style="color: #D8DEE9FF">            r</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> c </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> queue</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">popleft</span><span style="color: #ECEFF4">()</span></span>
+<span class="line"><span style="color: #D8DEE9FF">            </span><span style="color: #81A1C1">for</span><span style="color: #D8DEE9FF"> d </span><span style="color: #81A1C1">in</span><span style="color: #D8DEE9FF"> directions</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">                nr</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> nc </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> r </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> d</span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">0</span><span style="color: #ECEFF4">],</span><span style="color: #D8DEE9FF"> c </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> d</span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">]</span></span>
+<span class="line"><span style="color: #D8DEE9FF">                </span><span style="color: #81A1C1">if</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">self</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">is_valid</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">grid</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> nr</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> nc</span><span style="color: #ECEFF4">)</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">and</span><span style="color: #D8DEE9FF"> grid</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">nr</span><span style="color: #ECEFF4">][</span><span style="color: #D8DEE9FF">nc</span><span style="color: #ECEFF4">]</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">==</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">1</span><span style="color: #ECEFF4">"</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">                    queue</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">append</span><span style="color: #ECEFF4">((</span><span style="color: #D8DEE9FF">nr</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> nc</span><span style="color: #ECEFF4">))</span></span>
+<span class="line"><span style="color: #D8DEE9FF">                    grid</span><span style="color: #ECEFF4">[</span><span style="color: #D8DEE9FF">nr</span><span style="color: #ECEFF4">][</span><span style="color: #D8DEE9FF">nc</span><span style="color: #ECEFF4">]</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">0</span><span style="color: #ECEFF4">"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #81A1C1">def</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">is_valid</span><span style="color: #ECEFF4">(</span><span style="color: #81A1C1">self</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">grid</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">r</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">c</span><span style="color: #ECEFF4">):</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        m</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> n </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">grid</span><span style="color: #ECEFF4">),</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">len</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">grid</span><span style="color: #ECEFF4">[</span><span style="color: #B48EAD">0</span><span style="color: #ECEFF4">])</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        </span><span style="color: #81A1C1">if</span><span style="color: #D8DEE9FF"> r </span><span style="color: #81A1C1">&#x3C;</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">0</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">or</span><span style="color: #D8DEE9FF"> c </span><span style="color: #81A1C1">&#x3C;</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">0</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">or</span><span style="color: #D8DEE9FF"> r </span><span style="color: #81A1C1">>=</span><span style="color: #D8DEE9FF"> m </span><span style="color: #81A1C1">or</span><span style="color: #D8DEE9FF"> c </span><span style="color: #81A1C1">>=</span><span style="color: #D8DEE9FF"> n</span><span style="color: #ECEFF4">:</span></span>
+<span class="line"><span style="color: #D8DEE9FF">            </span><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">False</span></span>
+<span class="line"><span style="color: #D8DEE9FF">        </span><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">True</span></span></code></pre>
+    </article>
+    <hr class="astro-4SN4ZG3R">
+    <div class="astro-2JILUK5E">
+  <img src="/assets/eric-small.png" alt="Headshot of Maxi Ferreira" class="astro-2JILUK5E">
+  <p class="astro-2JILUK5E">
+    Hi, I'm <strong class="astro-2JILUK5E">Eric</strong>. I'm a software engineer and data scientist based in Lisbon.
+    You can follow me on <a href="https://www.twitter.com/eleijonmarck" target="_blank" class="astro-2JILUK5E">Twitter</a>,
+    see some of my work on <a href="https://www.github.com/eleijonmarck" target="_blank" class="astro-2JILUK5E">GitHub</a>,
+  </p>
+</div>
+  </div>
+    </main>
+
+    <footer class="astro-SZ7XMLTE">
+  <span class="astro-SZ7XMLTE">
+    &copy; 2023 A* information.
+    Powered by <a href="https://astro.build" target="_blank" rel="noopener" class="astro-SZ7XMLTE">Astro</a>.
+    Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener" class="astro-SZ7XMLTE">Maxi Ferreira</a>.
+  </span>
+</footer>
+  </div>
+</body></html>
