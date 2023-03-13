@@ -9,6 +9,7 @@ const permalink = Astro.site.href;
 
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
+
     <div class="home-copy">
       <h1>A* information</h1>
       <h3>software ・ data ・ ml ・ philosophy ・ health ・ misc</h3>
@@ -61,6 +62,9 @@ const permalink = Astro.site.href;
 
   .home-copy p {
     font-size: 1.4em;
+  }
+  .home-copy a {
+    text-decoration: none;
   }
 
   .hero-image-container {
