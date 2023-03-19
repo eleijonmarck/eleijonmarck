@@ -1,5 +1,4 @@
-Working @ [Grafana](https://www.grafana.com/)
-Blog @ [eleijonmarck.dev](https://eleijonmarck.dev)
+Working @ [Grafana](https://www.grafana.com/), Blog @ [eleijonmarck.dev](https://eleijonmarck.dev)
 
 #### Projects:
 - Neovim / Lunarvim contributor and configurer
