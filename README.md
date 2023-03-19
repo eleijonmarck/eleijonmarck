@@ -1,4 +1,4 @@
-- Working at: [Grafana](https://www.grafana.com/)
+- Working @ [Grafana](https://www.grafana.com/)
 - Blog: [eleijonmarck](https://eleijonmarck.dev)
 
 #### Projects:
