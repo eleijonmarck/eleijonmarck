@@ -3,3 +3,6 @@ node_modules/
 npm-debug.log
 .eslintcache
 .ipynb_checkpoints
+
+# Local Netlify folder
+.netlify
