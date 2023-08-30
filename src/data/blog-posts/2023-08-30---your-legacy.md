@@ -13,10 +13,6 @@ description: "A deep dive into the mathematical and technical aspects of legacy,
 socialImage: ""
 ---
 
-Certainly! Here's your blog post with the recommended changes incorporated:
-
----
-
 # The Mathematics of Impermanence: Why Your Legacy Might Not Be What You Think
 
 ## Preface
