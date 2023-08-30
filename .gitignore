@@ -4,5 +4,8 @@ npm-debug.log
 .eslintcache
 .ipynb_checkpoints
 
+**/.DS_Store
+
 # Local Netlify folder
 .netlify
+
