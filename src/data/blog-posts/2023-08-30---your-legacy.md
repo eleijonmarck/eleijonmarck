@@ -12,9 +12,6 @@ tags:
 description: "A deep dive into the mathematical and technical aspects of legacy, material possession, and social impact. Why what we often strive for may not last as long as we think."
 socialImage: ""
 ---
-
-# The Mathematics of Impermanence: Why Your Legacy Might Not Be What You Think
-
 ## Preface
 Life has been a rollercoaster lately, full of highs and lows. Life can be complex and life can be simple. Amid all this, I've found a renewed sense of presence and contentment. It's made me question what really lasts in life—beyond the material, beyond the immediate. This post dives into those questions, mixing personal reflection with math and science to explore what our true legacy might be. If you've ever wondered what endures in the grand scope of existence, this is for you.
 
