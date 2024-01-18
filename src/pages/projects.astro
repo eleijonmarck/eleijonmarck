@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Projects";
+const description = "My projects";
+const permalink = `${Astro.site.href}projects`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  permalink={permalink}
+  current="projects"
+>
+  <div class="author-list grid list-none grid-cols-1 gap-4 pl-0 md:grid-cols-2">
+    <h1>Projects</h1>
+    <p>
+      <p>
+        I found my passion during my studies and I have since then dived deep
+        into the world of ML/AI, optimization of data-processing or the trenches
+        of UNIX "everything as a file" to this day. Might put some time for vim
+        configuration (way too much time at times) ;)
+      </p>
+      <h2>Projects that are half done, half finished, half fun</h2>
+      <ul>
+        <li>
+          Playing around with service-workers and huggingface models to build a PWA for myself of a
+          session and task management tool - <a
+            href="https://zentered.netlify.app/"
+            >https://zentered.netlify.app/</a
+          >
+        </li>
+        <li>
+          Learning Rust by building a pandas series and dataframes with rust - <a
+            href="https://github.com/eleijonmarck/rustybucket"
+            >https://github.com/eleijonmarck/rustybucket</a
+          >
+        </li>
+        <li>
+          Educating about compounding interest in saving money over time - <a
+            href="https://monys.netlify.app/scenario"
+            >https://monys.netlify.app/scenario</a
+          >
+        </li>
+      </ul>
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-image {
+    float: right;
+    margin: -3em -7em 2em 2em;
+    max-width: 300px;
+  }
+
+  .about-image img {
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+  }
+
+  @media (max-width: 1020px) {
+    .about-image {
+      float: none;
+      margin: 0 auto 2em;
+    }
+  }
+</style>
