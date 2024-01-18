@@ -18,6 +18,8 @@ socialImage: ""
 
 Finding the perfect partner is something many of us think about. Can statistics help guide us in our search? Let's dive into some fun, and admittedly rough, calculations to estimate how many potential mates might be out there based on certain selected traits and conditions.
 
+**gist is**: I would have 3273 potential mates between the ages of 27-34 in London, Stockholm, and Lisbon, assuming I'm looking for someone who's in the top 30% for beauty, intelligence, emotional stability, and communication, given that only 50% of the population is single.
+
 **Assumptions:**
 
 1. **Traits**: We're focusing on four primary traits - beauty, intelligence, emotional stability, and communication. Each trait is assumed to be found in the top 30% of the population. Hence, only 30% of people qualify for each specific trait.
