@@ -6,11 +6,10 @@ draft: false
 slug: "The-Potential-Mates-Calculation"
 category: "mathematics"
 tags:
-
-"statistics"
-"relationships"
-"math"
-"sociology"
+  - "statistics"
+  - "relationships"
+  - "math"
+  - "sociology"
 description: "Exploring the intersection of math and romance, this post delves into the probabilities and assumptions behind finding a potential mate based on selected criteria. How do numbers influence our chances in love?"
 socialImage: ""
 ---
