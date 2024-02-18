@@ -17,6 +17,9 @@ Life has been a rollercoaster lately, full of highs and lows. Life can be comple
 
 Impermanence, also known as the philosophical problem of change, is a concept addressed in a variety of religions and philosophies. In Eastern philosophy, it is notably significant for its role in the Buddhist three marks of existence.
 
+Edit: Veritasium (the worlds best youtube) posted 2024-02 
+<video src="https://www.youtube.com/watch?v=mScpHTIi-kM"/>
+
 ## Introduction
 
 When we talk about leaving a legacy, buying homes, and accumulating wealth, we often overlook the long-term implications. The notion that our material possessions will eventually fade away and be owned by strangers can be jarring. However, if we pause to analyze these existential questions from a mathematical standpoint, we realize that perhaps the pursuit of "more" isn't as solid as we once believed. Let's explore the mathematical underpinnings of these ideas.
