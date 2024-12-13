@@ -6,7 +6,7 @@ Working @ [Grafana](https://www.grafana.com/), Blog @ [eleijonmarck.dev](https:/
 - Learning Rust
   - [rustybucket](https://github.com/eleijonmarck/rustybucket)
   - secret LLM project
-- Task manager w. fine-tuned AI prediction to help know what you want to do in your TODOs;
+- Dogfooding my own Task manager w. fine-tuned AI prediction to help know what you want to do in your TODOs;
   - [zentered](https://zentered.netlify.com)
 
 <a href="https://github-readme-stats-one-bice.vercel.app/api?username=eleijonmarck&theme=calm&show_icons=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER#gh-dark-mode-only" target="_blank">
