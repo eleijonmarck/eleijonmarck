@@ -25,6 +25,19 @@ const { title, description, permalink, current } = Astro.props;
 
     <Footer />
   </div>
+
+  <script>
+    if (typeof window !== 'undefined') {
+      import('../lib/telemetry/otel-setup').then(module => {
+        module.initializeTelemetry();
+      });
+
+      import('../lib/telemetry/web-vitals-integration').then(module => {
+        module.instrumentWebVitals();
+        module.captureNavigationTiming();
+      });
+    }
+  </script>
 </body>
 </html>
 
