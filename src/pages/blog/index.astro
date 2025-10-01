@@ -5,7 +5,8 @@ const title = 'Blog';
 const description = 'Latest articles.';
 const permalink = `${Astro.site.href}blog`;
 
-let allPosts = await Astro.glob('../../data/blog-posts/*.md');
+const posts = import.meta.glob('../../data/blog-posts/*.md', { eager: true });
+let allPosts = Object.values(posts);
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 ---
 
