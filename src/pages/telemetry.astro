@@ -1,0 +1,205 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Client-Side Observability";
+const description = "Self-contained OpenTelemetry implementation with browser-based tracing";
+const permalink = `${Astro.site.href}telemetry`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  permalink={permalink}
+>
+  <div class="container">
+    <h1>Client-Side Observability</h1>
+
+    <div class="intro">
+      <p>
+        This is a meta-project: applying production observability patterns to a static website.
+        As someone who works on observability infrastructure at Grafana, I wanted to explore
+        what monitoring looks like when you have no backend, no external services, and no data leaving your browser.
+      </p>
+    </div>
+
+    <h2>Why I Built This</h2>
+    <p>
+      Working on distributed systems at Grafana means thinking about observability constantly—how do we instrument services,
+      collect telemetry, and understand system behavior? But most observability solutions assume you have servers, databases,
+      and centralized collection pipelines.
+    </p>
+    <p>
+      I wanted to challenge that assumption. What if we applied the same principles to a static site deployed on Netlify?
+      Can we get meaningful insights using only browser APIs? The answer is yes.
+    </p>
+
+    <h2>How It Works</h2>
+    <div class="technical-details">
+      <div class="detail-section">
+        <h3>1. Browser-Based Tracing</h3>
+        <p>
+          OpenTelemetry JS runs entirely in your browser, collecting traces for page loads, navigation events,
+          resource timing (CSS, JS, images), and user interactions. Every action generates spans that follow
+          the OpenTelemetry specification.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h3>2. Local Storage</h3>
+        <p>
+          Instead of sending traces to a backend, they're stored in IndexedDB right in your browser.
+          No data leaves your machine. No external services. No privacy concerns.
+          You own your telemetry data completely.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h3>3. Client-Side Visualization</h3>
+        <p>
+          This page reads from IndexedDB and renders a timeline view of your traces.
+          You can see exactly how long pages took to load, which resources were slowest,
+          and how you navigated through the site—all from your own browsing session.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h3>4. Static Deployment</h3>
+        <p>
+          Everything is client-side JavaScript bundled with Astro and deployed as static assets to Netlify.
+          No servers to maintain. No databases to scale. No infrastructure costs.
+          Just pure observability as a first-class feature of the application.
+        </p>
+      </div>
+    </div>
+
+    <h2>What You Can Observe</h2>
+    <ul>
+      <li><strong>Page Load Performance</strong> — Time to first byte, DOM content loaded, full page load</li>
+      <li><strong>Resource Timing</strong> — How long each CSS, JS, and image took to load</li>
+      <li><strong>Navigation Patterns</strong> — Your journey through the site with timestamps</li>
+      <li><strong>Web Vitals</strong> — Core metrics like LCP (Largest Contentful Paint), FID (First Input Delay), CLS (Cumulative Layout Shift)</li>
+      <li><strong>Custom Events</strong> — Interactions like link clicks, theme toggles, etc.</li>
+    </ul>
+
+    <h2>The Builder Philosophy</h2>
+    <p>
+      This project embodies what I love about building: taking production-grade patterns and applying them
+      in unexpected contexts. Observability isn't just for microservices and Kubernetes clusters—it's a
+      mindset that applies anywhere you want to understand behavior.
+    </p>
+    <p>
+      By building this without external dependencies, I'm showing that the principles matter more than the tools.
+      You don't need Prometheus, Grafana Cloud, or a metrics backend to practice good observability.
+      You just need curiosity and the right APIs.
+    </p>
+
+    <div class="dashboard-placeholder">
+      <h2>Your Telemetry Data</h2>
+      <p class="status-message">
+        Dashboard implementation coming soon. This will display your traces, performance metrics,
+        and navigation timeline from your current browsing session.
+      </p>
+      <div class="placeholder-box">
+        <p>📊 Timeline View</p>
+        <p>🔍 Trace Details</p>
+        <p>⚡ Performance Metrics</p>
+        <p>🗺️ Navigation Graph</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .intro {
+    background: var(--bg-accent, rgba(0, 0, 0, 0.03));
+    padding: 1.5em;
+    border-left: 4px solid var(--primary-color, #0066cc);
+    margin: 2em 0;
+    border-radius: 4px;
+  }
+
+  .intro p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .technical-details {
+    margin: 2em 0;
+  }
+
+  .detail-section {
+    margin: 2em 0;
+    padding-left: 1em;
+    border-left: 2px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  }
+
+  .detail-section h3 {
+    margin-top: 0;
+    color: var(--primary-color, #0066cc);
+    font-size: 1.3em;
+  }
+
+  .detail-section p {
+    margin: 0.5em 0;
+    line-height: 1.7;
+  }
+
+  ul {
+    line-height: 1.9;
+    margin: 1em 0;
+  }
+
+  ul li {
+    margin: 0.5em 0;
+  }
+
+  ul li strong {
+    color: var(--text-heading, #1a1a1a);
+  }
+
+  .dashboard-placeholder {
+    margin: 3em 0;
+    padding: 2em;
+    background: var(--bg-secondary, #f8f9fa);
+    border-radius: 8px;
+    border: 2px dashed var(--border-color, rgba(0, 0, 0, 0.1));
+  }
+
+  .dashboard-placeholder h2 {
+    margin-top: 0;
+  }
+
+  .status-message {
+    color: var(--text-secondary, #666);
+    font-style: italic;
+    margin: 1em 0;
+  }
+
+  .placeholder-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    margin-top: 1.5em;
+  }
+
+  .placeholder-box p {
+    background: white;
+    padding: 1.5em;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  }
+
+  @media (max-width: 768px) {
+    .intro {
+      padding: 1em;
+    }
+
+    .placeholder-box {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

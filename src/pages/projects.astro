@@ -8,6 +8,15 @@ const permalink = `${Astro.site.href}projects`;
 
 const projects = [
   {
+    title: "Client-Side Observability",
+    description: "Self-contained OpenTelemetry implementation for this site - browser-based tracing with no backend required",
+    tech: ["OpenTelemetry", "IndexedDB", "Web Performance API", "Astro"],
+    link: "/telemetry",
+    github: null,
+    status: "In Progress",
+    highlight: "Meta-project: applying production observability patterns to a static site. Traces stored locally, visualized client-side."
+  },
+  {
     title: "LLM-Powered On-Call Agent",
     description: "AI agent integrated with GitHub for accelerating incident triage and issue investigation at Grafana",
     tech: ["LLMs", "GitHub API", "Go", "Observability"],
