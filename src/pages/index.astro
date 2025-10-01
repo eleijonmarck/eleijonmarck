@@ -11,31 +11,43 @@ const permalink = Astro.site.href;
   <div class="home-container">
 
     <div class="home-copy">
-      <h1>A* information</h1>
-      <p>You perfect your life by perfecting your information.</p>
-      <h3>software ・ data ・ ml ・ philosophy ・ health ・ misc</h3>
-      <a href="https://github.com/eleijonmarck">
-        <Icon name="mdi:github" size="40px" />
-      </a>
-      <a href="https://twitter.com/eleijonmarck">
-        <Icon name="mdi:twitter" size="40px" />
-      </a>
-      <a href="https://linkedin.com/in/eleijonmarck">
-        <Icon name="mdi:linkedin" size="40px" />
-      </a>
+      <h1>Eric Leijonmarck</h1>
+      <p class="tagline">Software Engineer & Technical Founder</p>
+      <p class="subtitle">Building data systems and ML infrastructure. I write about engineering craft, algorithms, and systems thinking.</p>
+      <p class="topics">software ・ data ・ ml ・ philosophy ・ health</p>
+      <div class="social-links">
+        <a href="https://github.com/eleijonmarck" aria-label="GitHub">
+          <Icon name="mdi:github" size="40px" />
+        </a>
+        <a href="https://twitter.com/eleijonmarck" aria-label="Twitter">
+          <Icon name="mdi:twitter" size="40px" />
+        </a>
+        <a href="https://linkedin.com/in/eleijonmarck" aria-label="LinkedIn">
+          <Icon name="mdi:linkedin" size="40px" />
+        </a>
+      </div>
     </div>
 
-    <div class="hero-image-container">
-      <picture>
-        <img
-          class="hero-image"
-          alt="knowledge"
-          src="/assets/a-start-logo.png"
-          width="550"
-          height="466"
-        />
-      </picture>
-      <p class="caption"></p>
+    <div class="currently-section">
+      <h2>Now</h2>
+      <div class="currently-items">
+        <div class="currently-item">
+          <span class="label">Building</span>
+          <p>Data infrastructure for ML workflows</p>
+        </div>
+        <div class="currently-item">
+          <span class="label">Learning</span>
+          <p>Distributed systems and consensus algorithms</p>
+        </div>
+        <div class="currently-item">
+          <span class="label">Writing</span>
+          <p>Deep dives on algorithms and system design</p>
+        </div>
+        <div class="currently-item">
+          <span class="label">Exploring</span>
+          <p>Rust for systems programming</p>
+        </div>
+      </div>
     </div>
   </div>
 </BaseLayout>
@@ -57,46 +69,110 @@ const permalink = Astro.site.href;
 
   .home-copy h1 {
     font-weight: 700;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
     line-height: 1.3;
+    font-size: 2.5em;
   }
 
-  .home-copy p {
-    font-size: 1.4em;
-  }
-  .home-copy a {
-    text-decoration: none;
-  }
-
-  .hero-image-container {
-    margin: 0 1em;
-    text-align: center;
+  .home-copy .tagline {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.5em;
   }
 
-  .hero-image-container picture {
-    display: block;
-    min-height: 250px;
-  }
-
-  .caption {
-    font-size: 0.8em;
-    font-style: italic;
-    text-align: left;
-  }
-
-  .hero-image {
-    width: 100%;
-    max-width: 550px;
+  .home-copy .subtitle {
+    font-size: 1.2em;
+    line-height: 1.6;
     margin-bottom: 1em;
+    max-width: 600px;
+  }
+
+  .home-copy .topics {
+    font-size: 1em;
+    color: var(--text-secondary);
+    margin-bottom: 1.5em;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1em;
+  }
+
+  .social-links a {
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .social-links a:hover {
+    transform: translateY(-2px);
+  }
+
+  .currently-section {
+    flex: 1;
+    padding: 0 1em;
+    max-width: 600px;
+  }
+
+  .currently-section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    color: var(--text-heading);
+  }
+
+  .currently-items {
+    display: grid;
+    gap: 1.5em;
+  }
+
+  .currently-item {
+    padding: 1.5em 0;
+    border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+    transition: opacity 0.2s;
+  }
+
+  .currently-item:last-child {
+    border-bottom: none;
+  }
+
+  .currently-item:hover {
+    opacity: 0.7;
+  }
+
+  .currently-item .label {
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: 0.5em;
+  }
+
+  .currently-item p {
+    font-size: 1.1em;
+    color: var(--text-heading);
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 400;
   }
 
   @media (max-width: 1200px) {
-    p {
-      font-size: 1.2em;
+    .home-copy h1 {
+      font-size: 2em;
     }
 
-    .hero-image {
-      max-width: 400px;
+    .home-copy .tagline {
+      font-size: 1.3em;
+    }
+
+    .home-copy .subtitle {
+      font-size: 1.1em;
+    }
+
+    .currently-section h2 {
+      font-size: 1.6em;
     }
   }
 
@@ -109,6 +185,31 @@ const permalink = Astro.site.href;
       flex: 0;
       padding-bottom: 2em;
       text-align: center;
+    }
+
+    .home-copy .subtitle {
+      max-width: 100%;
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+
+    .currently-section {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .currently-items {
+      gap: 1em;
+    }
+
+    .currently-item {
+      padding: 1em 0;
+    }
+
+    .currently-item p {
+      font-size: 1em;
     }
   }
 </style>

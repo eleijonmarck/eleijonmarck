@@ -8,13 +8,11 @@ category: "software-engineering"
 tags:
   - "software-engineering"
   - "rust"
-description: "Arbitrary code execution during compliation"
+description: "Arbitrary code execution during compilation."
 socialImage: ""
 ---
 
-# Arbitrary Code Execution During Rust Compilation: A Serious Vulnerability
-
-I recently played around with rust macros and discovered that they allow for arbitrary code execution during compliation. Here is a proof-of-concept that demonstrates a critical vulnerability in the Rust programming language ecosystem. The proof-of-concept, called `do not-run-this-code`, abuses Rust macros to interact with and modify the machine that the Rust code is being compiled on.
+I recently played around with Rust macros and discovered that they allow for arbitrary code execution during compilation. Here is a proof-of-concept that demonstrates a critical vulnerability in the Rust programming language ecosystem. The proof-of-concept, called `do not-run-this-code`, abuses Rust macros to interact with and modify the machine that the Rust code is being compiled on.
 
 Github: https://github.com/eleijonmarck/do-not-compile-this-code
 

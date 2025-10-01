@@ -1,9 +1,40 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
 
 const title = "Projects";
-const description = "My projects";
+const description = "Selected projects and experiments";
 const permalink = `${Astro.site.href}projects`;
+
+const projects = [
+  {
+    title: "Zentered",
+    description: "PWA for session and task management using service workers and Hugging Face models",
+    tech: ["Service Workers", "Hugging Face", "PWA"],
+    link: "https://zentered.netlify.app/",
+    github: null,
+    status: "In Progress",
+    highlight: "Offline-first architecture with AI integration"
+  },
+  {
+    title: "RustyBucket",
+    description: "Learning Rust by building pandas-like Series and DataFrames",
+    tech: ["Rust", "Data Structures", "Performance"],
+    link: null,
+    github: "https://github.com/eleijonmarck/rustybucket",
+    status: "Active",
+    highlight: "Zero-copy operations and memory-safe data manipulation"
+  },
+  {
+    title: "Monys",
+    description: "Interactive calculator for compound interest and financial planning",
+    tech: ["TypeScript", "Data Visualization", "Finance"],
+    link: "https://monys.netlify.app/scenario",
+    github: null,
+    status: "Live",
+    highlight: "Visual scenario modeling for long-term savings"
+  }
+];
 ---
 
 <BaseLayout
@@ -12,57 +43,205 @@ const permalink = `${Astro.site.href}projects`;
   permalink={permalink}
   current="projects"
 >
-  <div class="author-list grid list-none grid-cols-1 gap-4 pl-0 md:grid-cols-2">
-    <h1>Projects</h1>
-    <p>
-      <p>
-        I found my passion during my studies and I have since then dived deep
-        into the world of ML/AI, optimization of data-processing or the trenches
-        of UNIX "everything as a file" to this day. Might put some time for vim
-        configuration (way too much time at times) ;)
+  <div class="projects-container">
+    <div class="projects-header">
+      <h1>Projects</h1>
+      <p class="intro">
+        I focus on ML/AI, data processing optimization, and systems programming.
+        From exploring Rust's ownership model to building offline-first web apps,
+        these projects reflect my interest in performance, algorithms, and practical applications.
       </p>
-      <h2>Projects that are half done, half finished, half fun</h2>
-      <ul>
-        <li>
-          Playing around with service-workers and huggingface models to build a PWA for myself of a
-          session and task management tool - <a
-            href="https://zentered.netlify.app/"
-            >https://zentered.netlify.app/</a
-          >
-        </li>
-        <li>
-          Learning Rust by building a pandas series and dataframes with rust - <a
-            href="https://github.com/eleijonmarck/rustybucket"
-            >https://github.com/eleijonmarck/rustybucket</a
-          >
-        </li>
-        <li>
-          Educating about compounding interest in saving money over time - <a
-            href="https://monys.netlify.app/scenario"
-            >https://monys.netlify.app/scenario</a
-          >
-        </li>
-      </ul>
-    </p>
+    </div>
+
+    <div class="projects-grid">
+      {projects.map((project) => (
+        <article class="project-card">
+          <div class="project-header">
+            <h2>{project.title}</h2>
+            <span class="status">{project.status}</span>
+          </div>
+
+          <p class="description">{project.description}</p>
+
+          {project.highlight && (
+            <p class="highlight">
+              <strong>Highlight:</strong> {project.highlight}
+            </p>
+          )}
+
+          <div class="tech-stack">
+            {project.tech.map((tech) => (
+              <span class="tech-tag">{tech}</span>
+            ))}
+          </div>
+
+          <div class="project-links">
+            {project.link && (
+              <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-link">
+                <Icon name="mdi:open-in-new" size="18px" />
+                Live Demo
+              </a>
+            )}
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noopener noreferrer" class="project-link">
+                <Icon name="mdi:github" size="18px" />
+                Source Code
+              </a>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
   </div>
 </BaseLayout>
 
 <style>
-  .about-image {
-    float: right;
-    margin: -3em -7em 2em 2em;
-    max-width: 300px;
+  .projects-container {
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 0 1em;
   }
 
-  .about-image img {
-    border-radius: 8px;
-    margin-bottom: 1.5em;
+  .projects-header {
+    margin-bottom: 3em;
+  }
+
+  .projects-header h1 {
+    font-family: var(--font-family-serif);
+    font-size: 4em;
+    margin: 0 0 1em 0;
+  }
+
+  .intro {
+    font-size: 1.3rem;
+    line-height: 1.75em;
+    color: var(--text-main);
+    margin: 1.2em 0;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+  }
+
+  .project-card {
+    border: none;
+    padding: 0;
+    background: transparent;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5em;
+    gap: 1em;
+  }
+
+  .project-card h2 {
+    font-family: var(--font-family-sans);
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-main);
+  }
+
+  .status {
+    font-family: var(--font-family-sans);
+    font-size: 0.65em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }
+
+  .description {
+    font-size: 1.3rem;
+    line-height: 1.75em;
+    color: var(--text-main);
+    margin: 1.2em 0;
+  }
+
+  .highlight {
+    font-size: 1.3rem;
+    line-height: 1.75em;
+    color: var(--text-secondary);
+    margin: 1.2em 0;
+    font-style: italic;
+  }
+
+  .highlight strong {
+    font-style: normal;
+    color: var(--text-main);
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    margin: 1.5em 0;
+  }
+
+  .tech-tag {
+    font-family: var(--font-family-sans);
+    font-size: 0.9rem;
+    padding: 0.3em 0.7em;
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 1.5em;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: var(--font-family-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .project-link:hover {
+    color: var(--primary-color);
+  }
+
+  hr {
+    margin: 3em 0;
   }
 
   @media (max-width: 1020px) {
-    .about-image {
-      float: none;
-      margin: 0 auto 2em;
+    .projects-header h1 {
+      font-size: 3em;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .project-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3em;
+    }
+
+    .status {
+      font-size: 0.75em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .description,
+    .highlight {
+      font-size: 1.2rem;
     }
   }
 </style>

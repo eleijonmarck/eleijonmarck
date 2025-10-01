@@ -16,7 +16,7 @@ socialImage: "./images/music-genre-classification.png"
 # ♫ - Music Genre Classification
 Build a machine learning (ML) model that takes audio files as input and returns a corresponding music genre.
 
-### Building a model using fastai and 🚀 Deploy the model to GCP
+### Building a model using fastai and deploying to GCP
 
 ## Gist of everything
 - In [approach](#approach) lies all the steps taken

@@ -1,53 +1,238 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import readingTime from 'reading-time';
 
-const title = 'Blog';
-const description = 'Latest articles.';
+const title = 'Writing';
+const description = 'Essays and technical writing on software, data, and systems.';
 const permalink = `${Astro.site.href}blog`;
 
 const posts = import.meta.glob('../../data/blog-posts/*.md', { eager: true });
 let allPosts = Object.values(posts);
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+
+// Featured posts - manually curated
+const featuredSlugs = [
+  '2024-01-18---your-potential-mate',
+  '2023-03-18---arbitrary-code-execution-rust',
+  '2022-10-02---rust-ownership',
+  '2019-06-09---understanding-gradient-descent'
+];
+
+const featuredPosts = allPosts.filter(post => {
+  const slug = post.file.split('/').pop().split('.').shift();
+  return featuredSlugs.includes(slug);
+});
+
+// Get category/tags if available
+function getCategory(post) {
+  return post.frontmatter.category || post.frontmatter.tags?.[0] || 'article';
+}
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
   <div class="container">
-    <h1>Blog</h1>
-    {allPosts.map((post, index) => {
-      const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
-      return (
-        <div>
-          { index !== 0 && <hr /> }
-          <div class="post-item">
-            <h2>
-              <a href={href}>{post.frontmatter.title}</a>
-            </h2>
-            <p>{post.frontmatter.description}</p>
-            <div class="post-item-footer">
-              <span class="post-item-date">— {post.frontmatter.date}</span>
-            </div>
-          </div>
+    <h1>Writing</h1>
+
+    {featuredPosts.length > 0 && (
+      <section class="featured-section">
+        <h2 class="section-title">Featured</h2>
+        <div class="featured-posts">
+          {featuredPosts.map((post) => {
+            const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
+            const readTime = readingTime(post.rawContent()).text;
+            return (
+              <article class="featured-post">
+                <span class="category">{getCategory(post)}</span>
+                <h3>
+                  <a href={href}>{post.frontmatter.title}</a>
+                </h3>
+                <p class="description">{post.frontmatter.description}</p>
+                <div class="meta">
+                  <span class="date">{post.frontmatter.date}</span>
+                  <span class="separator">·</span>
+                  <span class="read-time">{readTime}</span>
+                </div>
+              </article>
+            );
+          })}
         </div>
-      )
-    })}
+      </section>
+    )}
+
+    <section class="all-posts-section">
+      <h2 class="section-title">All Posts</h2>
+      {allPosts.map((post, index) => {
+        const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
+        const readTime = readingTime(post.rawContent()).text;
+        return (
+          <div>
+            { index !== 0 && <hr /> }
+            <article class="post-item">
+              <h3>
+                <a href={href}>{post.frontmatter.title}</a>
+              </h3>
+              <p class="description">{post.frontmatter.description}</p>
+              <div class="post-item-footer">
+                <span class="post-item-date">{post.frontmatter.date}</span>
+                <span class="separator">·</span>
+                <span class="read-time">{readTime}</span>
+              </div>
+            </article>
+          </div>
+        )
+      })}
+    </section>
   </div>
 </BaseLayout>
 
 <style>
-  h2,
-  .post-item-footer {
+  .section-title {
     font-family: var(--font-family-sans);
+    font-size: 1.2em;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin: 3em 0 1.5em 0;
+  }
+
+  /* Featured Posts Section */
+  .featured-section {
+    margin-bottom: 4em;
+  }
+
+  .featured-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2em;
+    margin-bottom: 2em;
+  }
+
+  .featured-post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .featured-post .category {
+    font-family: var(--font-family-sans);
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+  }
+
+  .featured-post h3 {
+    font-family: var(--font-family-sans);
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .featured-post h3 a {
+    text-decoration: none;
+    color: var(--text-main);
+  }
+
+  .featured-post h3 a:hover {
+    color: var(--primary-color);
+  }
+
+  .featured-post .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0.5em 0;
+  }
+
+  .featured-post .meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-family: var(--font-family-sans);
+    font-size: 0.85em;
+    color: var(--text-secondary);
+  }
+
+  .featured-post .separator {
+    color: var(--text-secondary);
+  }
+
+  /* All Posts Section */
+  .all-posts-section {
+    margin-top: 4em;
+  }
+
+  .post-item h3 {
+    font-family: var(--font-family-sans);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+  }
+
+  .post-item h3 a {
+    text-decoration: none;
+    color: var(--text-main);
+  }
+
+  .post-item h3 a:hover {
+    color: var(--primary-color);
+  }
+
+  .post-item .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0.5em 0;
+  }
+
+  .post-item-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-family: var(--font-family-sans);
+    font-weight: 600;
   }
 
   .post-item-date {
+    font-size: 0.9em;
     color: var(--text-secondary);
-    text-align: left;
     text-transform: uppercase;
-    margin-right: 16px;
+  }
+
+  .post-item-footer .separator {
+    color: var(--text-secondary);
+  }
+
+  .post-item-footer .read-time {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-weight: 400;
   }
 
   hr {
-    margin: 60px auto;
+    margin: 2.5em 0;
+  }
+
+  @media (max-width: 768px) {
+    .featured-posts {
+      grid-template-columns: 1fr;
+      gap: 2em;
+    }
+
+    .section-title {
+      font-size: 1em;
+      margin: 2em 0 1em 0;
+    }
+
+    .featured-post h3 {
+      font-size: 1.2em;
+    }
+
+    .post-item h3 {
+      font-size: 1.3em;
+    }
   }
 </style>

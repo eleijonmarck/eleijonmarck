@@ -1,0 +1,81 @@
+<script>
+  function addCopyButtons() {
+    const codeBlocks = document.querySelectorAll('pre');
+
+    codeBlocks.forEach((block) => {
+      // Skip if button already exists
+      if (block.querySelector('.copy-button')) return;
+
+      const button = document.createElement('button');
+      button.className = 'copy-button';
+      button.textContent = 'Copy';
+      button.setAttribute('aria-label', 'Copy code to clipboard');
+
+      button.addEventListener('click', async () => {
+        const code = block.querySelector('code')?.textContent || '';
+
+        try {
+          await navigator.clipboard.writeText(code);
+          button.textContent = 'Copied!';
+          button.classList.add('copied');
+
+          setTimeout(() => {
+            button.textContent = 'Copy';
+            button.classList.remove('copied');
+          }, 2000);
+        } catch (err) {
+          button.textContent = 'Failed';
+          setTimeout(() => {
+            button.textContent = 'Copy';
+          }, 2000);
+        }
+      });
+
+      block.style.position = 'relative';
+      block.appendChild(button);
+    });
+  }
+
+  // Run on page load
+  document.addEventListener('DOMContentLoaded', addCopyButtons);
+  // Run after view transitions (Astro feature)
+  document.addEventListener('astro:page-load', addCopyButtons);
+</script>
+
+<style is:global>
+  .copy-button {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    padding: 0.4em 0.8em;
+    font-size: 0.75em;
+    font-family: var(--font-family-sans);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--background-body);
+    color: var(--text-secondary);
+    border: 1px solid var(--text-secondary);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    opacity: 0;
+  }
+
+  pre:hover .copy-button {
+    opacity: 1;
+  }
+
+  .copy-button:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+
+  .copy-button.copied {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    opacity: 1;
+  }
+</style>

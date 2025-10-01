@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Now";
+const description = "What I'm working on right now.";
+const permalink = `${Astro.site.href}now`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  permalink={permalink}
+  current="now"
+>
+  <div class="container">
+    <h1>Now</h1>
+
+    <p class="intro">
+      This is a <a href="https://nownownow.com/about" target="_blank" rel="noopener">/now page</a>, inspired by Derek Sivers. It's a snapshot of what I'm focused on at this point in my life.
+    </p>
+
+    <p class="last-updated">Last updated: January 2025</p>
+
+    <section>
+      <h2>Building</h2>
+      <p>Data infrastructure for ML workflows, focusing on performance and reliability at scale.</p>
+    </section>
+
+    <section>
+      <h2>Learning</h2>
+      <p>Distributed systems and consensus algorithms. Exploring how systems maintain consistency across multiple nodes.</p>
+    </section>
+
+    <section>
+      <h2>Writing</h2>
+      <p>Deep dives on algorithms, system design, and Rust programming. Check out my <a href="/blog">latest posts</a>.</p>
+    </section>
+
+    <section>
+      <h2>Exploring</h2>
+      <p>Rust for systems programming — pushing the boundaries of memory safety and performance.</p>
+    </section>
+
+    <section>
+      <h2>Reading</h2>
+      <ul>
+        <li>Designing Data-Intensive Applications by Martin Kleppmann</li>
+        <li>The Rust Programming Language (2nd Edition)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Location</h2>
+      <p>Currently based between London, Stockholm, and Lisbon.</p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .intro {
+    font-size: 1.2em;
+    color: var(--text-secondary);
+  }
+
+  .last-updated {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 3em;
+  }
+
+  section {
+    margin-bottom: 2.5em;
+  }
+
+  section h2 {
+    font-family: var(--font-family-sans);
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+  }
+
+  section p, section ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  section ul {
+    margin-top: 0.5em;
+  }
+</style>
