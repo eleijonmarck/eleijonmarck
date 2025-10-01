@@ -8,31 +8,40 @@ const permalink = `${Astro.site.href}projects`;
 
 const projects = [
   {
+    title: "LLM-Powered On-Call Agent",
+    description: "AI agent integrated with GitHub for accelerating incident triage and issue investigation at Grafana",
+    tech: ["LLMs", "GitHub API", "Go", "Observability"],
+    link: null,
+    github: null,
+    status: "Production",
+    highlight: "Reduces mean time to resolution by automating context gathering and pattern matching across repositories"
+  },
+  {
+    title: "OpenFGA Authorization",
+    description: "Built Grafana's core authorization engine based on Google's Zanzibar paper using OpenFGA",
+    tech: ["OpenFGA", "Zanzibar", "Go", "Distributed Systems"],
+    link: "https://github.com/openfga/openfga",
+    github: null,
+    status: "Production",
+    highlight: "Powers multi-tenant access control across the entire Grafana ecosystem"
+  },
+  {
     title: "Zentered",
-    description: "PWA for session and task management using service workers and Hugging Face models",
+    description: "PWA for session and task management with offline-first architecture and AI integration",
     tech: ["Service Workers", "Hugging Face", "PWA"],
     link: "https://zentered.netlify.app/",
     github: null,
     status: "In Progress",
-    highlight: "Offline-first architecture with AI integration"
+    highlight: "Local-first ML models for task categorization and time management"
   },
   {
     title: "RustyBucket",
-    description: "Learning Rust by building pandas-like Series and DataFrames",
+    description: "Building pandas-like data structures in Rust to explore ownership, performance, and zero-copy operations",
     tech: ["Rust", "Data Structures", "Performance"],
     link: null,
     github: "https://github.com/eleijonmarck/rustybucket",
     status: "Active",
-    highlight: "Zero-copy operations and memory-safe data manipulation"
-  },
-  {
-    title: "Monys",
-    description: "Interactive calculator for compound interest and financial planning",
-    tech: ["TypeScript", "Data Visualization", "Finance"],
-    link: "https://monys.netlify.app/scenario",
-    github: null,
-    status: "Live",
-    highlight: "Visual scenario modeling for long-term savings"
+    highlight: "Memory-safe data manipulation without garbage collection overhead"
   }
 ];
 ---
@@ -47,9 +56,9 @@ const projects = [
     <div class="projects-header">
       <h1>Projects</h1>
       <p class="intro">
-        I focus on ML/AI, data processing optimization, and systems programming.
-        From exploring Rust's ownership model to building offline-first web apps,
-        these projects reflect my interest in performance, algorithms, and practical applications.
+        I build at the intersection of distributed systems and AI applications.
+        My work at Grafana focuses on authorization infrastructure and developer tools,
+        while my side projects explore ML integration, systems programming, and practical applications.
       </p>
     </div>
 
@@ -107,15 +116,16 @@ const projects = [
   }
 
   .projects-header h1 {
-    font-family: var(--font-family-serif);
-    font-size: 4em;
+    font-family: var(--font-family-sans);
+    font-size: 2.5em;
     margin: 0 0 1em 0;
+    font-weight: 700;
   }
 
   .intro {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.75em;
-    color: var(--text-main);
+    color: var(--text-secondary);
     margin: 1.2em 0;
   }
 
@@ -222,7 +232,7 @@ const projects = [
 
   @media (max-width: 1020px) {
     .projects-header h1 {
-      font-size: 3em;
+      font-size: 2.2em;
     }
   }
 

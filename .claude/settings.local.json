@@ -11,7 +11,9 @@
       "WebSearch",
       "WebFetch(domain:scottmax.com)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$(cat <<''EOF''\nMajor site improvements and upgrades\n\n- Upgraded Astro from v2.1.2 to v5.14.1\n- Updated all integrations and dependencies\n- Changed \"Blog\" to \"Writing\" throughout site\n- Improved homepage with \"Now\" section instead of static image\n- Redesigned projects page with clean, minimal layout\n- Enhanced blog index with featured posts section\n- Added RSS feed support\n- Fixed typos and improved content quality\n- Added reading time estimates to all posts\n- Added reading progress indicator\n- Added copy buttons to code blocks\n- Added related posts suggestions\n- Improved About page with clearer messaging\n- Created dedicated /now page\n- Updated TypeScript configuration\n- Fixed all breaking changes from Astro v5\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+      "Bash(git commit -m \"$(cat <<''EOF''\nMajor site improvements and upgrades\n\n- Upgraded Astro from v2.1.2 to v5.14.1\n- Updated all integrations and dependencies\n- Changed \"Blog\" to \"Writing\" throughout site\n- Improved homepage with \"Now\" section instead of static image\n- Redesigned projects page with clean, minimal layout\n- Enhanced blog index with featured posts section\n- Added RSS feed support\n- Fixed typos and improved content quality\n- Added reading time estimates to all posts\n- Added reading progress indicator\n- Added copy buttons to code blocks\n- Added related posts suggestions\n- Improved About page with clearer messaging\n- Created dedicated /now page\n- Updated TypeScript configuration\n- Fixed all breaking changes from Astro v5\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Read(//Users/eleijonmarck/Downloads/**)"
     ],
     "deny": [],
     "ask": []
