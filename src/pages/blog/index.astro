@@ -10,7 +10,11 @@ const posts = import.meta.glob('../../data/blog-posts/*.md', { eager: true });
 let allPosts = Object.values(posts);
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 
-// Featured posts - manually curated
+// Latest post - always the most recent
+const latestPost = allPosts[0];
+const latestSlug = latestPost.file.split('/').pop().split('.').shift();
+
+// Featured posts - manually curated (excluding latest if it's in the list)
 const featuredSlugs = [
   '2024-01-18---your-potential-mate',
   '2023-03-18---arbitrary-code-execution-rust',
@@ -20,12 +24,19 @@ const featuredSlugs = [
 
 const featuredPosts = allPosts.filter(post => {
   const slug = post.file.split('/').pop().split('.').shift();
-  return featuredSlugs.includes(slug);
+  return featuredSlugs.includes(slug) && slug !== latestSlug;
 });
+
+// Remaining posts (excluding latest)
+const remainingPosts = allPosts.slice(1);
 
 // Get category/tags if available
 function getCategory(post) {
   return post.frontmatter.category || post.frontmatter.tags?.[0] || 'article';
+}
+
+function getSlug(post) {
+  return post.file.split('/').pop().split('.').shift();
 }
 ---
 
@@ -33,12 +44,29 @@ function getCategory(post) {
   <div class="container">
     <h1>Writing</h1>
 
+    {/* Latest Post - Always on top */}
+    <section class="latest-section">
+      <h2 class="section-title">Latest</h2>
+      <article class="latest-post">
+        <span class="category">{getCategory(latestPost)}</span>
+        <h3>
+          <a href={`/blog/${getSlug(latestPost)}`}>{latestPost.frontmatter.title}</a>
+        </h3>
+        <p class="description">{latestPost.frontmatter.description}</p>
+        <div class="meta">
+          <span class="date">{latestPost.frontmatter.date}</span>
+          <span class="separator">·</span>
+          <span class="read-time">{readingTime(latestPost.rawContent()).text}</span>
+        </div>
+      </article>
+    </section>
+
     {featuredPosts.length > 0 && (
       <section class="featured-section">
         <h2 class="section-title">Featured</h2>
         <div class="featured-posts">
           {featuredPosts.map((post) => {
-            const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
+            const href = `/blog/${getSlug(post)}`;
             const readTime = readingTime(post.rawContent()).text;
             return (
               <article class="featured-post">
@@ -61,8 +89,8 @@ function getCategory(post) {
 
     <section class="all-posts-section">
       <h2 class="section-title">All Posts</h2>
-      {allPosts.map((post, index) => {
-        const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
+      {remainingPosts.map((post, index) => {
+        const href = `/blog/${getSlug(post)}`;
         const readTime = readingTime(post.rawContent()).text;
         return (
           <div>
@@ -94,6 +122,64 @@ function getCategory(post) {
     letter-spacing: 0.1em;
     color: var(--text-secondary);
     margin: 3em 0 1.5em 0;
+  }
+
+  /* Latest Post Section */
+  .latest-section {
+    margin-bottom: 3em;
+  }
+
+  .latest-section .section-title {
+    margin-top: 1.5em;
+  }
+
+  .latest-post {
+    padding: 2em;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background: var(--background-body);
+  }
+
+  .latest-post .category {
+    font-family: var(--font-family-sans);
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary-color);
+  }
+
+  .latest-post h3 {
+    font-family: var(--font-family-sans);
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0.3em 0 0.5em 0;
+    line-height: 1.2;
+  }
+
+  .latest-post h3 a {
+    text-decoration: none;
+    color: var(--text-main);
+  }
+
+  .latest-post h3 a:hover {
+    color: var(--primary-color);
+  }
+
+  .latest-post .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0.5em 0 1em 0;
+  }
+
+  .latest-post .meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-family: var(--font-family-sans);
+    font-size: 0.9em;
+    color: var(--text-secondary);
   }
 
   /* Featured Posts Section */
@@ -217,6 +303,14 @@ function getCategory(post) {
   }
 
   @media (max-width: 768px) {
+    .latest-post {
+      padding: 1.5em;
+    }
+
+    .latest-post h3 {
+      font-size: 1.4em;
+    }
+
     .featured-posts {
       grid-template-columns: 1fr;
       gap: 2em;
