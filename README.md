@@ -1,8 +1,14 @@
-Working @ [Grafana](https://www.grafana.com/), Blog @ [eleijonmarck.dev](https://eleijonmarck.dev)
+Working @ [Rerun](https://rerun.io), Blog @ [eleijonmarck.dev](https://eleijonmarck.dev)
+
+### Previously worked @:
+Worked @ [Grafana](https://www.grafana.com/)
 
 #### Projects:
+- 
 - Neovim / Lunarvim contributor and configurer
 - Open source / AI enthuisast / Data intensive applications
+- Kubernetes RBAC / OpenFGA
+- Go for cloud native
 - Learning Rust
   - [rustybucket](https://github.com/eleijonmarck/rustybucket)
   - secret LLM project
